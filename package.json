@@ -1,0 +1,27 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-customizable": "^6.3.0",
+    "husky": "^7.0.1",
+    "lerna": "^4.0.0",
+    "yorkie": "^2.0.0"
+  },
+  "scripts": {
+    "commit": "git cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "gitHooks": {
+    "commit-msg": "commitlint -e -V"
+  }
+}

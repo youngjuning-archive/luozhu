@@ -14,6 +14,9 @@
   },
   "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/youngjuning/luozhu-cli/tree/main/packages/prettier-config#readme",
   "repository": {
     "type": "git",

@@ -9,8 +9,7 @@
   ],
   "command": {
     "publish": {
-      "registry": "https://registry.npmjs.org",
-      "verifyAccess": false
+      "registry": "https://registry.npmjs.org"
     },
     "version": {
       "conventionalCommits": true,

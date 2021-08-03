@@ -16,8 +16,7 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "patch.js",
-    "rule.js"
+    "patch.js"
   ],
   "license": "MIT",
   "publishConfig": {
@@ -42,9 +41,6 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0"
-  },
-  "devDependencies": {
-    "react": "^17.0.2"
   },
   "peerDependencies": {
     "eslint": "^7.32.0",

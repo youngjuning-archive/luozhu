@@ -11,4 +11,14 @@ module.exports = {
     'react-native/no-raw-text': 0,
     'react-native/no-inline-styles': 1,
   },
+  overrides: [
+    {
+      files: ['*.jsx', '*.js'],
+      parserOptions: {
+        babelOptions: {
+          presets: ['module:metro-react-native-babel-preset'],
+        },
+      },
+    },
+  ],
 };

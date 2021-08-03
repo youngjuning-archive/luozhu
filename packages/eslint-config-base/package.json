@@ -15,8 +15,7 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "patch.js",
-    "rule.js"
+    "patch.js"
   ],
   "license": "MIT",
   "publishConfig": {

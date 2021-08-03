@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/youngjuning/luozhu-cli/compare/@luozhu/eslint-config-typescript@1.0.0...@luozhu/eslint-config-typescript@1.1.0) (2021-08-03)
+
+
+### Features
+
+* add eslint-import-resolver-typescript ([7f4f1ae](https://github.com/youngjuning/luozhu-cli/commit/7f4f1ae3e206312b6179a83bec18267dca983961))
+
+
+
+
+
 # 1.0.0 (2021-08-03)
 
 

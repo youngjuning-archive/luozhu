@@ -11,7 +11,7 @@ module.exports = {
         },
         ecmaVersion: 2020,
       },
-      rules: require('./rule'),
+      rules: require('@luozhu/eslint-rules').javascript,
     },
   ],
 };

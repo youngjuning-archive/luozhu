@@ -36,6 +36,7 @@
     "prettier": "^2.3.2"
   },
   "dependencies": {
+    "@luozhu/eslint-rules": "^1.0.0",
     "@rushstack/eslint-patch": "^1.0.6",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",

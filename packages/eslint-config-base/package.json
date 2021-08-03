@@ -31,6 +31,8 @@
     "url": "https://github.com/youngjuning/luozhu-cli/issues"
   },
   "dependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/eslint-parser": "^7.14.9",
     "@luozhu/eslint-rules": "^1.2.0",
     "@rushstack/eslint-patch": "^1.0.6",
     "eslint-config-airbnb-base": "^14.2.1",

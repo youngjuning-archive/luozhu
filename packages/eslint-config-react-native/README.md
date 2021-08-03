@@ -29,3 +29,9 @@ module.exports = {
 **Temporary Solutions:**
 
 - [Fix eslint shareable config using rushstack/eslint-patch](https://github.com/facebook/create-react-app/commit/6e10091a235ba4e15097be79b003fdde1f373331)
+
+### Updating babel-eslint to @babel/eslint-parser for React apps
+
+**Related Links:**
+
+- https://tjaddison.com/blog/2021/03/updating-babel-eslint-to-babeleslint-parser-for-react-apps/

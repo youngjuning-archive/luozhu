@@ -34,7 +34,8 @@
   "dependencies": {
     "@luozhu/eslint-config-base": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0"
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint-import-resolver-typescript": "^2.4.0"
   },
   "devDependencies": {
     "typescript": "^4.3.5"

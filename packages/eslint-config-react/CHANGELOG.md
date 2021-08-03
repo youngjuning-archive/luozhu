@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/youngjuning/luozhu-cli/compare/@luozhu/eslint-config-react@1.1.0...@luozhu/eslint-config-react@1.1.1) (2021-08-03)
+
+**Note:** Version bump only for package @luozhu/eslint-config-react
+
+
+
+
+
 # 1.1.0 (2021-08-03)
 
 

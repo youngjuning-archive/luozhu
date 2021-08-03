@@ -12,6 +12,12 @@ module.exports = {
         'prettier',
       ],
       parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaFeatures: {
+          impliedStrict: true,
+        },
+        ecmaVersion: 2020,
+      },
       rules: {
         ...require('@luozhu/eslint-config-base/rule'),
         ...require('./rule'),

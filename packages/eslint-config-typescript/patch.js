@@ -5,7 +5,5 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-'use strict';
-
 // Fix eslint shareable config (https://github.com/eslint/eslint/issues/3458)
 require('@rushstack/eslint-patch/modern-module-resolution');

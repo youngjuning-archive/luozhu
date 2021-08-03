@@ -6,7 +6,6 @@ module.exports = {
     {
       files: ['*.jsx'],
       extends: ['airbnb', 'airbnb/hooks', 'plugin:prettier/recommended', 'prettier'],
-      parser: '@babel/eslint-parser',
       parserOptions: {
         ecmaFeatures: {
           impliedStrict: true,

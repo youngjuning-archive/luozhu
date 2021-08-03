@@ -5,9 +5,7 @@ module.exports = {
     {
       files: ['*.js'],
       extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
-      parser: '@babel/eslint-parser',
       parserOptions: {
-        requireConfigFile: false,
         ecmaFeatures: {
           impliedStrict: true,
         },

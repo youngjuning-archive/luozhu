@@ -1,9 +1,9 @@
-# @luozhu/eslint-config-react
+# @luozhu/eslint-config-react-typescript
 
 ## Install
 
 ```sh
-$ yarn add -D @luozhu/eslint-config-react eslint prettier
+$ yarn add -D @luozhu/eslint-config-react-typescript eslint prettier typescript
 ```
 
 ## Usage
@@ -12,7 +12,7 @@ $ yarn add -D @luozhu/eslint-config-react eslint prettier
 // .eslintrc.js
 module.exports = {
   root: true,
-  extends: ['@luozhu/eslint-config-react'],
+  extends: ['@luozhu/eslint-config-react-typescript'],
 };
 ```
 

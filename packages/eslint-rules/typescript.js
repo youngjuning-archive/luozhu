@@ -23,4 +23,5 @@ module.exports = {
       variables: false,
     },
   ],
+  '@typescript-eslint/explicit-module-boundary-types': 0,
 };

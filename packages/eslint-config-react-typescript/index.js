@@ -1,12 +1,13 @@
 require('./patch');
 
 module.exports = {
-  extends: ['@luozhu/eslint-config-base'],
+  extends: ['@luozhu/eslint-config-react'],
   overrides: [
     {
-      files: ['*.ts'],
+      files: ['*.ts', '*.tsx'],
       extends: [
-        'airbnb-base',
+        'airbnb',
+        'airbnb/hooks',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
         'prettier',
@@ -15,16 +16,21 @@ module.exports = {
       parserOptions: {
         ecmaFeatures: {
           impliedStrict: true,
+          jsx: true,
         },
         ecmaVersion: 2020,
       },
       rules: {
         ...require('@luozhu/eslint-rules').javascript,
         ...require('@luozhu/eslint-rules').typescript,
+        ...require('@luozhu/eslint-rules').javascriptReact,
       },
       settings: {
+        react: {
+          version: 'detect',
+        },
         'import/parsers': {
-          '@typescript-eslint/parser': ['.ts'],
+          '@typescript-eslint/parser': ['.ts', '.tsx'],
         },
         'import/resolver': {
           // use <root>/tsconfig.json

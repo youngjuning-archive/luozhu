@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/youngjuning/luozhu-cli/compare/@luozhu/eslint-config-base@1.3.0...@luozhu/eslint-config-base@1.3.1) (2021-08-03)
+
+
+### Bug Fixes
+
+* add miss dependencies ([22e861a](https://github.com/youngjuning/luozhu-cli/commit/22e861afbb92fc2f4dd8b3eef4fd79688b0a8e46))
+
+
+
+
+
 # [1.3.0](https://github.com/youngjuning/luozhu-cli/compare/@luozhu/eslint-config-base@1.2.1...@luozhu/eslint-config-base@1.3.0) (2021-08-03)
 
 

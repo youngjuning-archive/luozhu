@@ -19,8 +19,8 @@ module.exports = {
         ecmaVersion: 2020,
       },
       rules: {
-        ...require('@luozhu/eslint-config-base/rule'),
-        ...require('./rule'),
+        ...require('@luozhu/eslint-rules').javascript,
+        ...require('@luozhu/eslint-rules').typescript,
       },
       settings: {
         'import/parsers': {

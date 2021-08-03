@@ -1,10 +1,9 @@
 require('./patch');
 
 module.exports = {
-  extends: ['@luozhu/eslint-config-typescript'],
   overrides: [
     {
-      files: ['*.jsx'],
+      files: ['*.jsx', '*.js'],
       extends: ['airbnb', 'airbnb/hooks', 'plugin:prettier/recommended', 'prettier'],
       parserOptions: {
         ecmaFeatures: {
@@ -14,8 +13,8 @@ module.exports = {
         ecmaVersion: 2020,
       },
       rules: {
-        ...require('@luozhu/eslint-config-base/rule'),
-        ...require('./rule'),
+        ...require('@luozhu/eslint-rules').javascript,
+        ...require('@luozhu/eslint-rules').javascriptReact,
       },
       settings: {
         react: {

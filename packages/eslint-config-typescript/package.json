@@ -13,6 +13,11 @@
     "url": "https://youngjuning.js.org"
   },
   "main": "index.js",
+  "files": [
+    "index.js",
+    "patch.js",
+    "rule.js"
+  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"

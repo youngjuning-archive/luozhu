@@ -1,0 +1,37 @@
+{
+  "name": "@luozhu/eslint-config-typescript",
+  "version": "1.0.0",
+  "description": "Luozhu's typescript eslint config",
+  "keywords": [
+    "luozhu",
+    "eslint-config",
+    "typescript"
+  ],
+  "author": {
+    "name": "洛竹",
+    "email": "youngjuning@aliyun.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-typescript#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youngjuning/luozhu-cli.git",
+    "directory": "packages/eslint-config-typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/youngjuning/luozhu-cli/issues"
+  },
+  "dependencies": {
+    "@luozhu/eslint-config-base": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}

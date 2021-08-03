@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ['@luozhu/base'],
+  extends: ['@luozhu/eslint-config-typescript'],
 };

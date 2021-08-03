@@ -1,18 +1,11 @@
 require('./patch');
+
 module.exports = {
-  extends: [
-    'airbnb-base',
-    'plugin:prettier/recommended',
-    'prettier'
-  ],
-  env: {
-    es6: true,
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      impliedStrict: true,
+  overrides: [
+    {
+      files: ['*.js'],
+      extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
+      rules: require('./rule'),
     },
-    ecmaVersion: 2020,
-    sourceType: 'module',
-  }
+  ],
 };

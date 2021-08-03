@@ -1,7 +1,7 @@
 {
   "name": "@luozhu/eslint-config-base",
   "version": "1.0.0",
-  "description": "Luozhu's prettier config",
+  "description": "Luozhu's base eslint config",
   "keywords": [
     "luozhu",
     "eslint-config",
@@ -36,5 +36,9 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "prettier": "^2.3.2"
   }
 }

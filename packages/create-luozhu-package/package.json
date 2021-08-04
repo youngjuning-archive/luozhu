@@ -13,7 +13,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "bin": {
-    "luozhu": "./bin/cli.js"
+    "create-luozhu-package": "./bin/cli.js"
   },
   "scripts": {
     "prebuild": "rimraf lib",

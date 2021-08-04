@@ -37,4 +37,4 @@ module.exports = {
   arrowParens: 'avoid',
   vueIndentScriptAndStyle: false, // vue 文件 script 和 style 标签缩进，默认false
   endOfLine: 'lf', // 强制使用 unix 风格的换行符
-}
+};

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/youngjuning/luozhu/compare/create-luozhu-package@0.0.3...create-luozhu-package@0.0.4) (2021-08-04)
+
+### Bug Fixes
+
+- upload template folder ([e197c0c](https://github.com/youngjuning/luozhu/commit/e197c0c9a8219e3624b6f4ec1d2490b9b2812515))
+
 ## [0.0.3](https://github.com/youngjuning/luozhu/compare/create-luozhu-package@0.0.2...create-luozhu-package@0.0.3) (2021-08-04)
 
 ### Bug Fixes

@@ -55,3 +55,27 @@ module.exports = require('@luozhu/prettier-config');
 - [@luozhu/eslint-config-react](https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-react#readme) for react project.
 - [@luozhu/eslint-config-react-typescript](https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-react-typescript#readme) for react、react with typescript project.
 - [@luozhu/eslint-config-react-native](https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-react-native#readme) for react-native project.
+
+### lint-staged
+
+```sh
+$ yarn add lint-staged yorkie -D
+```
+
+```json
+{
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{less,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+}
+```

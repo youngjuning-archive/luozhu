@@ -1,8 +1,12 @@
 <div align="center">
-  <h1>洛竹</h1>
+  <h1>Luozhu「洛竹🎋」</h1>
   <img alt="" src="https://user-images.githubusercontent.com/13204332/128195385-ed8af07f-78a8-4254-937a-56c816712575.png" width="200"/>
-  <p>大家好，我是洛竹🎋，一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的项目，可以通过⭐️帮我聚集灵力。</p>
+  <p>Truth is endless. Coding it.</p>
 </div>
+
+## Node CLI
+
+- [@luozhu/template-generator](https://github.com/youngjuning/luozhu/tree/main/packages/template-generator)：A template generator based on handlebars.
 
 ## Coding Style
 
@@ -72,15 +76,9 @@ $ yarn add lint-staged yorkie -D
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "**/*.{less,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
+    "**/*.{js,jsx,ts,tsx}": ["eslint --fix"],
+    "**/*.{md,json}": ["prettier --write"]
+  }
 }
 ```
 

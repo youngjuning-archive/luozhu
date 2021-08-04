@@ -12,16 +12,18 @@
     "commitlint-config-cz": "^0.13.2",
     "cz-customizable": "^6.3.0",
     "eslint": "^7.32.0",
-    "husky": "^7.0.1",
     "lerna": "^4.0.0",
+    "lint-staged": "^11.1.1",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-native": "^0.64.2",
+    "rimraf": "^3.0.2",
     "typescript": "^4.3.5",
     "yorkie": "^2.0.0"
   },
   "scripts": {
-    "commit": "git cz"
+    "commit": "git cz",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "config": {
     "commitizen": {
@@ -29,6 +31,15 @@
     }
   },
   "gitHooks": {
-    "commit-msg": "commitlint -e -V"
+    "commit-msg": "commitlint -e -V",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "**/*.{md,json}": [
+      "prettier --write"
+    ]
   }
 }

@@ -22,14 +22,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-react#readme",
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/eslint-config-react#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/youngjuning/luozhu-cli.git",
+    "url": "https://github.com/youngjuning/luozhu.git",
     "directory": "packages/eslint-config-react"
   },
   "bugs": {
-    "url": "https://github.com/youngjuning/luozhu-cli/issues"
+    "url": "https://github.com/youngjuning/luozhu/issues"
   },
   "dependencies": {
     "@luozhu/eslint-rules": "^1.2.0",

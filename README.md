@@ -54,11 +54,11 @@ module.exports = require('@luozhu/prettier-config');
 
 #### Packages
 
-- [@luozhu/eslint-config-base](https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-base#readme) for pure javascript project.
-- [@luozhu/eslint-config-typescript](https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-typescript#readme) for javascript、typescript project.
-- [@luozhu/eslint-config-react](https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-react#readme) for react project.
-- [@luozhu/eslint-config-react-typescript](https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-react-typescript#readme) for react、react with typescript project.
-- [@luozhu/eslint-config-react-native](https://github.com/youngjuning/luozhu-cli/tree/main/packages/eslint-config-react-native#readme) for react-native project.
+- [@luozhu/eslint-config-base](https://github.com/youngjuning/luozhu/tree/main/packages/eslint-config-base#readme) for pure javascript project.
+- [@luozhu/eslint-config-typescript](https://github.com/youngjuning/luozhu/tree/main/packages/eslint-config-typescript#readme) for javascript、typescript project.
+- [@luozhu/eslint-config-react](https://github.com/youngjuning/luozhu/tree/main/packages/eslint-config-react#readme) for react project.
+- [@luozhu/eslint-config-react-typescript](https://github.com/youngjuning/luozhu/tree/main/packages/eslint-config-react-typescript#readme) for react、react with typescript project.
+- [@luozhu/eslint-config-react-native](https://github.com/youngjuning/luozhu/tree/main/packages/eslint-config-react-native#readme) for react-native project.
 
 ### pre-commit lint
 

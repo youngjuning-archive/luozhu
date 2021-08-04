@@ -1,5 +1,5 @@
 module.exports = {
   root: true,
   extends: ['@luozhu/eslint-config-typescript'],
-  ignorePatterns: ['dist', '**/*.d.ts'],
+  ignorePatterns: ['lib', '**/*.d.ts'],
 };

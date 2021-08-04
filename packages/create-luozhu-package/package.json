@@ -1,0 +1,55 @@
+{
+  "name": "create-luozhu-package",
+  "version": "0.0.0",
+  "description": "Create luozhu package",
+  "keywords": [
+    "yarn-create",
+    "npm-init",
+    "npx"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "luozhu": "./bin/cli.js"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngjuning/luozhu.git",
+    "directory": "packages/create-luozhu-package"
+  },
+  "author": {
+    "name": "洛竹",
+    "email": "youngjuning@aliyun.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngjuning/luozhu/issues"
+  },
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-luozhu-package#readme",
+  "dependencies": {
+    "@luozhu/template-generator": "^0.2.0",
+    "chalk": "^4.1.1",
+    "commander": "^8.0.0",
+    "execa": "^5.1.1",
+    "fs-extra": "^10.0.0",
+    "inquire": "^0.4.8",
+    "ora": "^5.4.1",
+    "tmp-promise": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.12",
+    "@types/inquirer": "^7.3.3",
+    "@types/ora": "^3.2.0",
+    "fs-extra": "^10.0.0"
+  }
+}

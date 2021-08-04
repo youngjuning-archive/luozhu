@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/eslint-config-typescript",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Luozhu's typescript eslint config",
   "keywords": [
     "luozhu",
@@ -31,7 +31,7 @@
     "url": "https://github.com/youngjuning/luozhu/issues"
   },
   "dependencies": {
-    "@luozhu/eslint-config-base": "^1.6.0",
+    "@luozhu/eslint-config-base": "^1.7.0",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
     "eslint-import-resolver-typescript": "^2.4.0"

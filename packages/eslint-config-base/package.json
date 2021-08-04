@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/eslint-config-base",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Luozhu's base eslint config",
   "keywords": [
     "luozhu",
@@ -31,7 +31,7 @@
     "url": "https://github.com/youngjuning/luozhu/issues"
   },
   "dependencies": {
-    "@luozhu/eslint-rules": "^1.2.0",
+    "@luozhu/eslint-rules": "^1.3.0",
     "@rushstack/eslint-patch": "^1.0.6",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",

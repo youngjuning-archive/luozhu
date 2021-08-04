@@ -23,6 +23,7 @@
   },
   "scripts": {
     "commit": "git cz",
+    "build": "lerna run build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "config": {

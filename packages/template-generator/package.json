@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/template-generator",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A template generator based on handlebars.",
   "keywords": [
     "handlebars",

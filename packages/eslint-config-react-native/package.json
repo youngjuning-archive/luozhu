@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/eslint-config-react-native",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Luozhu's react eslint config",
   "keywords": [
     "luozhu",
@@ -32,7 +32,7 @@
     "url": "https://github.com/youngjuning/luozhu/issues"
   },
   "dependencies": {
-    "@luozhu/eslint-config-react-typescript": "^1.3.0",
+    "@luozhu/eslint-config-react-typescript": "^1.4.0",
     "eslint-plugin-react-native": "^3.11.0",
     "metro-react-native-babel-preset": "^0.66.2"
   }

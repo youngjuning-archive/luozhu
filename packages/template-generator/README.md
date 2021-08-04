@@ -1,22 +1,22 @@
-# handlebars-template-compiler
+# @luozhu/template-generator
 
 ## Install
 
 ```sh
-$ npm install handlebars-template-compiler
+$ npm install @luozhu/template-generator
 ```
 
 OR
 
 ```sh
-$ yarn add handlebars-template-compiler
+$ yarn add @luozhu/template-generator
 ```
 
 ## Usage
 
 ```ts
-const compiler = require('handlebars-template-compiler');
-compiler(
+const generator = require('@luozhu/template-generator');
+generator(
   {
     name: '洛竹',
   },

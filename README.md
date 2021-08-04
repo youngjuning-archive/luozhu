@@ -79,3 +79,14 @@ $ yarn add lint-staged yorkie -D
   },
 }
 ```
+
+### vscode config
+
+```js
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}
+```

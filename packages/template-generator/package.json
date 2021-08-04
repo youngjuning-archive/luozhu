@@ -1,0 +1,51 @@
+{
+  "name": "@luozhu/template-generator",
+  "version": "0.0.0",
+  "description": "A template generator based on handlebars.",
+  "keywords": [
+    "handlebars",
+    "template",
+    "generator"
+  ],
+  "author": {
+    "name": "洛竹",
+    "email": "youngjuning@aliyun.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/youngjuning/luozhu/packages/template-generator#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngjuning/luozhu.git",
+    "directory": "packages/template-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/youngjuning/luozhu/issues"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf .dist/",
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.12",
+    "@types/handlebars": "^4.1.0",
+    "@types/micromatch": "^4.0.2",
+    "@types/recursive-readdir": "^2.2.0"
+  },
+  "resolutions": {
+    "typescript": "^4.1.6"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "handlebars": "^4.7.7",
+    "micromatch": "^4.0.4",
+    "recursive-readdir": "^2.2.2"
+  }
+}

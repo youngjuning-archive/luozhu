@@ -7,6 +7,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import ora from 'ora';
 import generator from '@luozhu/template-generator';
+import { isDirEmpty } from '@luozhu/node';
 
 interface IMeta {
   name: string;
@@ -76,12 +77,10 @@ const init = (): void => {
     .argument('<name>', 'package name')
     .argument('[loc]', 'package location')
     .action(async (name, loc) => {
+      const answer: IMeta = await inquirer.prompt(getQuestions(name));
+      const spinner = ora(chalk.blackBright(`Creating ${name}`));
       try {
-        const answer: IMeta = await inquirer.prompt(getQuestions(name));
-        const spinner = ora(chalk.blackBright(`Creating ${name}`));
         spinner.start();
-        const tmpdir = await tmp.dir({ unsafeCleanup: true });
-        fs.copySync(path.join(__dirname, '../template'), tmpdir.path);
 
         let locPath = '';
         if (loc) {
@@ -93,13 +92,31 @@ const init = (): void => {
         }
         answer.directory = locPath;
 
+        const rootDir = `${process.cwd()}/packages/${locPath}`;
+        if (fs.existsSync(rootDir) && !(await isDirEmpty(rootDir))) {
+          spinner.fail(
+            chalk.red(
+              `Cannot initialize new project because directory packages/${locPath} is not empty.`
+            )
+          );
+          process.exit(0);
+        }
+
+        const tmpdir = await tmp.dir({ unsafeCleanup: true });
+        fs.copySync(path.join(__dirname, '../template'), tmpdir.path);
+
         await generator<IMeta>(answer, tmpdir.path);
 
-        fs.copySync(tmpdir.path, `${process.cwd()}/packages/${locPath}`);
+        fs.copySync(tmpdir.path, rootDir);
+        execa.commandSync('yarn install', {
+          cwd: rootDir,
+          stdout: 'inherit',
+        });
 
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${name} has been generated at packages/${locPath}`));
       } catch (error) {
+        spinner.fail(chalk.red(error.message));
         process.exit(0);
       }
     })

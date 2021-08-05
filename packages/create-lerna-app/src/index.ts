@@ -34,10 +34,6 @@ const init = (): void => {
           cwd: rootDir,
         });
         spinner.info(`${stdout}`);
-        execa.commandSync('yarn install', {
-          cwd: rootDir,
-          stdout: 'inherit',
-        });
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${name} has been generated!`));
       } catch (error) {

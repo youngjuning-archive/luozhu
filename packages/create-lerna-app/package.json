@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-lerna-app",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Create lerna app",
   "keywords": [
     "yarn-create",

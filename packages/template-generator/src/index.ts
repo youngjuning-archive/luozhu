@@ -34,6 +34,9 @@ const generator = async <TMeta>(
   files.forEach(file => {
     const isInclude = tplSuffix ? micromatch.isMatch(file, `**/*.${tplSuffix}.*`) : true;
     const isExclude = exclude && micromatch.isMatch(file, exclude);
+    if (file === 'gitignore') {
+      fs.renameSync(file, '.gitignore');
+    }
     if (isExclude) {
       return;
     }

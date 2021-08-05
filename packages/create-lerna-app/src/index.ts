@@ -30,6 +30,7 @@ const init = (): void => {
         await generator({}, tmpdir.path);
 
         fs.copySync(tmpdir.path, rootDir);
+        execa.commandSync('git init');
         execa.commandSync('yarn install', {
           cwd: rootDir,
           stdout: 'inherit',

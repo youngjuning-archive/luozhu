@@ -16,5 +16,7 @@ $ yarn create luozhu-package
 # install
 $ npm install create-luozhu-package -g
 # usage
-$ create-luozhu-package
+$ create-luozhu-package <packageName>
+# can also use in shorthand
+$ clp <packageName>
 ```

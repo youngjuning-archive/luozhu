@@ -14,7 +14,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "bin": {
-    "create-luozhu-package": "./bin/cli.js"
+    "create-luozhu-package": "./bin/cli.js",
+    "clp": "./bin/cli.js"
   },
   "scripts": {
     "prebuild": "rimraf lib",
@@ -50,7 +51,6 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.12",
     "@types/inquirer": "^7.3.3",
-    "@types/ora": "^3.2.0",
-    "fs-extra": "^10.0.0"
+    "@types/ora": "^3.2.0"
   }
 }

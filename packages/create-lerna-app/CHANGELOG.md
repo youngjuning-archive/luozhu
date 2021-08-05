@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.2.3...@luozhu/create-lerna-app@0.3.0) (2021-08-05)
+
+### Features
+
+- exec git init before yarn install ([d292096](https://github.com/youngjuning/luozhu/commit/d292096e9819fd677800d82bc8648e0e3439c907))
+
 ## [0.2.3](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.2.2...@luozhu/create-lerna-app@0.2.3) (2021-08-05)
 
 **Note:** Version bump only for package @luozhu/create-lerna-app

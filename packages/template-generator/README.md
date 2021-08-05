@@ -27,3 +27,7 @@ generator(
   }
 );
 ```
+
+## Related Links
+
+- [How do I include a .gitignore file as part of my npm module?](https://stackoverflow.com/questions/24976950/how-do-i-include-a-gitignore-file-as-part-of-my-npm-module)

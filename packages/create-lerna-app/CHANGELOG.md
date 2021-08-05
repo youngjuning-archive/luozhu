@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.3.0...@luozhu/create-lerna-app@0.3.1) (2021-08-05)
+
+### Bug Fixes
+
+- exec git init on project rootDir ([2428f01](https://github.com/youngjuning/luozhu/commit/2428f0124fafd92cc7fa6d628cfdd1691bcd0948))
+
 # [0.3.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.2.3...@luozhu/create-lerna-app@0.3.0) (2021-08-05)
 
 ### Features

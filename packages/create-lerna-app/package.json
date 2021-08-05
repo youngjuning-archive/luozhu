@@ -17,6 +17,9 @@
     "create-lerna-app": "./bin/cli.js",
     "cla": "./bin/cli.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "tsc",

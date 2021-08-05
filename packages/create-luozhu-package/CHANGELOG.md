@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/youngjuning/luozhu/compare/create-luozhu-package@0.0.5...create-luozhu-package@0.1.0) (2021-08-05)
+
+### Features
+
+- add create-lerna-app ([097c9d8](https://github.com/youngjuning/luozhu/commit/097c9d8f93d0cea97708539b85b12f4baa30a05c))
+
 ## [0.0.5](https://github.com/youngjuning/luozhu/compare/create-luozhu-package@0.0.4...create-luozhu-package@0.0.5) (2021-08-05)
 
 **Note:** Version bump only for package create-luozhu-package

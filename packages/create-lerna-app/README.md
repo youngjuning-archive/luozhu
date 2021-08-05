@@ -3,11 +3,11 @@
 ## Usage directly
 
 ```sh
-$ npx @luozhu/create-lerna-app
+$ npx @luozhu/create-lerna-app <projectName>
 # or
-$ npm init @luozhu/lerna-app
+$ npm init @luozhu/lerna-app <projectName>
 # or
-$ yarn create @luozhu/lerna-app
+$ yarn create @luozhu/lerna-app <projectName>
 ```
 
 ## Install before Usage

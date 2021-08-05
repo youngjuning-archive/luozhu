@@ -1,0 +1,44 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@luozhu/eslint-config-typescript": "^1.8.1",
+    "@luozhu/prettier-config": "^1.0.3",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^7.32.0",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.1.1",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5",
+    "yorkie": "^2.0.0"
+  },
+  "scripts": {
+    "commit": "git cz",
+    "build": "lerna run build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "gitHooks": {
+    "commit-msg": "commitlint -e -V",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "**/*.{md,json}": [
+      "prettier --write"
+    ]
+  }
+}

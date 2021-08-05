@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/youngjuning/luozhu/compare/create-luozhu-package@0.0.4...create-luozhu-package@0.0.5) (2021-08-05)
+
+**Note:** Version bump only for package create-luozhu-package
+
 ## [0.0.4](https://github.com/youngjuning/luozhu/compare/create-luozhu-package@0.0.3...create-luozhu-package@0.0.4) (2021-08-04)
 
 ### Bug Fixes

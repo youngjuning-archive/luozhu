@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/youngjuning/luozhu/compare/@luozhu/template-generator@0.2.2...@luozhu/template-generator@0.3.0) (2021-08-05)
+
+### Features
+
+- add handlebars.registerHelper ([ae8693d](https://github.com/youngjuning/luozhu/commit/ae8693d17cadf87aa1002ef728a69971af217b84))
+
 ## [0.2.2](https://github.com/youngjuning/luozhu/compare/@luozhu/template-generator@0.2.1...@luozhu/template-generator@0.2.2) (2021-08-04)
 
 **Note:** Version bump only for package @luozhu/template-generator

@@ -10,8 +10,8 @@
 
 ## Scaffold
 
-- [create-luozhu-package](https://github.com/youngjuning/luozhu/packages/create-luozhu-package/)
-- [@luozhu/create-lerna-app](https://github.com/youngjuning/luozhu/packages/create-lerna-app/)
+- [x] [create-luozhu-package](https://github.com/youngjuning/luozhu/packages/create-luozhu-package/)
+- [x] [@luozhu/create-lerna-app](https://github.com/youngjuning/luozhu/packages/create-lerna-app/)
 - [ ] [@luozhu/create-commitlint](https://github.com/youngjuning/luozhu/packages/create-commitlint/)
 - [ ] [@luozhu/create-react-jest](https://github.com/youngjuning/luozhu/packages/create-react-jest/)
 - [ ] [@luozhu/create-react-native-jest](https://github.com/youngjuning/luozhupackages/create-react-native-jest/)

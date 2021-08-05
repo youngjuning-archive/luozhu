@@ -2,8 +2,13 @@
 
 ## Install
 
-TODO: Add Install Method
+```sh
+$ yarn install @luozhu/node
+```
 
 ## Usage
 
-TODO: Add Usage Demo
+```ts
+import // module
+'@luozhu/node';
+```

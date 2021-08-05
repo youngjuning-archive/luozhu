@@ -2,8 +2,13 @@
 
 ## Install
 
-TODO: Add Install Method
+```sh
+$ yarn install {{name}}
+```
 
 ## Usage
 
-TODO: Add Usage Demo
+```ts
+import // module
+'{{name}}';
+```

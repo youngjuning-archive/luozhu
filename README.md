@@ -4,12 +4,9 @@
   <p>Truth is endless. Keep coding.</p>
 </div>
 
-## Node CLI
-
-- [@luozhu/template-generator](https://github.com/youngjuning/luozhu/tree/main/packages/template-generator)：A template generator based on handlebars.
-
 ## Scaffold
 
+- [x] [@luozhu/template-generator](https://github.com/youngjuning/luozhu/tree/main/packages/template-generator)：A template generator based on handlebars.
 - [x] [create-luozhu-package](https://github.com/youngjuning/luozhu/packages/create-luozhu-package/)
 - [x] [@luozhu/create-lerna-app](https://github.com/youngjuning/luozhu/packages/create-lerna-app/)
 - [ ] [@luozhu/create-commitlint](https://github.com/youngjuning/luozhu/packages/create-commitlint/)

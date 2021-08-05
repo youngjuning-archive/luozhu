@@ -14,6 +14,14 @@ interface IOption {
   tplSuffix?: string;
 }
 
+// register handlebars helper
+handlebars.registerHelper('if_eq', (a, b, opts) => {
+  return a === b ? opts.fn(this) : opts.inverse(this);
+});
+handlebars.registerHelper('unless_eq', (a, b, opts) => {
+  return a === b ? opts.inverse(this) : opts.fn(this);
+});
+
 const generator = async <TMeta>(
   meta: TMeta,
   rootDir: string,

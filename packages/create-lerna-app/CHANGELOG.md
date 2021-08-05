@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.1.0...@luozhu/create-lerna-app@0.2.0) (2021-08-05)
+
+### Features
+
+- add lerna template ([fd1eab3](https://github.com/youngjuning/luozhu/commit/fd1eab3daf8d07273872773780192a3900fe2d55))
+
 # 0.1.0 (2021-08-05)
 
 ### Features

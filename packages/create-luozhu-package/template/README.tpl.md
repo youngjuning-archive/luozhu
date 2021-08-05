@@ -9,6 +9,5 @@ $ yarn install {{name}}
 ## Usage
 
 ```ts
-import // module
-'{{name}}';
+import {} from '{{name}}';
 ```

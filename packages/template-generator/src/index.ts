@@ -34,8 +34,8 @@ const generator = async <TMeta>(
   files.forEach(file => {
     const isInclude = tplSuffix ? micromatch.isMatch(file, `**/*.${tplSuffix}.*`) : true;
     const isExclude = exclude && micromatch.isMatch(file, exclude);
-    if (file === 'gitignore') {
-      fs.renameSync(file, '.gitignore');
+    if (file.endsWith('gitignore')) {
+      fs.renameSync(file, file.replace('gitignore', '.gitignore'));
     }
     if (isExclude) {
       return;
@@ -45,11 +45,7 @@ const generator = async <TMeta>(
       const result = handlebars.compile(content)(meta);
 
       fs.writeFileSync(file, result);
-      const newPath = file
-        .split('.')
-        .filter(path => path !== tplSuffix)
-        .join('.');
-      fs.renameSync(file, newPath);
+      fs.renameSync(file, file.replace('tpl.', ''));
     }
   });
 };

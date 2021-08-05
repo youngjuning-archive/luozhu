@@ -30,15 +30,14 @@ const init = (): void => {
         await generator({}, tmpdir.path);
 
         fs.copySync(tmpdir.path, rootDir);
-        execa.commandSync('git init', {
+        const { stdout } = execa.commandSync('git init', {
           cwd: rootDir,
-          stdout: 'inherit',
         });
+        spinner.info(`${stdout}`);
         execa.commandSync('yarn install', {
           cwd: rootDir,
           stdout: 'inherit',
         });
-
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${name} has been generated!`));
       } catch (error) {

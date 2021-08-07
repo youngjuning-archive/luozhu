@@ -2,7 +2,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import shell from 'shelljs';
 
-module.exports = async () => {
+const init = () => {
   const templateDir = path.resolve(__dirname, '../templates/conventional');
   const projectDir = `${process.cwd()}`;
   fs.copySync(templateDir, projectDir);
@@ -42,3 +42,5 @@ module.exports = async () => {
     'yarn add commitizen cz-customizable @commitlint/cli commitlint-config-cz yorkie -D -W'
   );
 };
+
+export { init };

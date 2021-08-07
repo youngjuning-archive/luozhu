@@ -3,7 +3,7 @@ import path from 'path';
 import shell from 'shelljs';
 
 const init = () => {
-  const templateDir = path.resolve(__dirname, '../templates/conventional');
+  const templateDir = path.resolve(__dirname, '../template');
   const projectDir = `${process.cwd()}`;
   fs.copySync(templateDir, projectDir);
   console.log();

@@ -1936,6 +1936,14 @@
   dependencies:
     "@types/node" "*"
 
+"@types/glob@*":
+  version "7.1.4"
+  resolved "https://registry.nlark.com/@types/glob/download/@types/glob-7.1.4.tgz#ea59e21d2ee5c517914cb4bc8e4153b99e566672"
+  integrity sha1-6lniHS7lxReRTLS8jkFTuZ5WZnI=
+  dependencies:
+    "@types/minimatch" "*"
+    "@types/node" "*"
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
   resolved "https://registry.npmjs.org/@types/graceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
@@ -1989,7 +1997,7 @@
   dependencies:
     "@types/braces" "*"
 
-"@types/minimatch@^3.0.3":
+"@types/minimatch@*", "@types/minimatch@^3.0.3":
   version "3.0.5"
   resolved "https://registry.nlark.com/@types/minimatch/download/@types/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
   integrity sha1-EAHMXmo3BLg8I2An538vWOoBD0A=
@@ -2053,6 +2061,14 @@
   version "0.16.2"
   resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
+
+"@types/shelljs@^0.8.9":
+  version "0.8.9"
+  resolved "https://registry.nlark.com/@types/shelljs/download/@types/shelljs-0.8.9.tgz#45dd8501aa9882976ca3610517dac3831c2fbbf4"
+  integrity sha1-Rd2FAaqYgpdso2EFF9rDgxwvu/Q=
+  dependencies:
+    "@types/glob" "*"
+    "@types/node" "*"
 
 "@types/through@*":
   version "0.0.30"

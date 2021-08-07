@@ -1,0 +1,46 @@
+{
+  "name": "@luozhu/create-commitlint",
+  "version": "0.0.0",
+  "description": "create commitlint config in your project",
+  "keywords": [
+    "luozhu"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "create-commitlint": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngjuning/luozhu.git",
+    "directory": "packages/create-commitlint"
+  },
+  "author": {
+    "name": "杨俊宁",
+    "email": "youngjuning@aliyun.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngjuning/luozhu/issues"
+  },
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-commitlint#readme",
+  "dependencies": {
+    "fs-extra": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/shelljs": "^0.8.9"
+  }
+}

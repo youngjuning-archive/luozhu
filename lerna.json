@@ -2,11 +2,7 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "ignoreChanges": [
-    "ignored-file",
-    "**/__tests__/**",
-    "**/*.md"
-  ],
+  "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/CHANGELOG.md", "**/README.md"],
   "command": {
     "publish": {
       "registry": "https://registry.npmjs.org"

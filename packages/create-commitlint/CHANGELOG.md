@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/youngjuning/luozhu/compare/@luozhu/create-commitlint@0.1.3...@luozhu/create-commitlint@0.1.4) (2021-08-07)
+
+### Bug Fixes
+
+- remove whitespace ([baa233d](https://github.com/youngjuning/luozhu/commit/baa233d0d5372e010ec09ad60eebb624dbe7fdc0))
+
 ## [0.1.3](https://github.com/youngjuning/luozhu/compare/@luozhu/create-commitlint@0.1.2...@luozhu/create-commitlint@0.1.3) (2021-08-07)
 
 ### Bug Fixes

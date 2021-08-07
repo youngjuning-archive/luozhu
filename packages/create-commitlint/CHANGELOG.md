@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/youngjuning/luozhu/compare/@luozhu/create-commitlint@0.1.2...@luozhu/create-commitlint@0.1.3) (2021-08-07)
+
+### Bug Fixes
+
+- add template to files ([5d651b3](https://github.com/youngjuning/luozhu/commit/5d651b39ef1b50197867eeba09407cb58a3daee6))
+
 ## [0.1.2](https://github.com/youngjuning/luozhu/compare/@luozhu/create-commitlint@0.1.1...@luozhu/create-commitlint@0.1.2) (2021-08-07)
 
 ### Bug Fixes

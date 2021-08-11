@@ -47,7 +47,7 @@ trim_trailing_whitespace = false
 **Install:**
 
 ```$
-$ yarn add @luozhu/prettier-config -D
+$ yarn add @luozhu/prettier-config prettier -D
 ```
 
 **Config:**
@@ -61,6 +61,12 @@ module.exports = require('@luozhu/prettier-config');
 ### Eslint
 
 > vscode extension: [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+You must add eslint by yourself.
+
+```sh
+$ yarn add eslint -D
+```
 
 #### Packages
 

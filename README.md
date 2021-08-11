@@ -7,12 +7,12 @@
 ## Scaffold
 
 - [x] [@luozhu/template-generator](https://github.com/youngjuning/luozhu/tree/main/packages/template-generator)：A template generator based on handlebars.
-- [x] [create-luozhu-package](https://github.com/youngjuning/luozhu/packages/create-luozhu-package/)
-- [x] [@luozhu/create-lerna-app](https://github.com/youngjuning/luozhu/packages/create-lerna-app/)
-- [ ] [@luozhu/create-commitlint](https://github.com/youngjuning/luozhu/packages/create-commitlint/)
-- [ ] [@luozhu/create-react-jest](https://github.com/youngjuning/luozhu/packages/create-react-jest/)
-- [ ] [@luozhu/create-react-native-jest](https://github.com/youngjuning/luozhupackages/create-react-native-jest/)
-- [ ] [@luozhu/create-rollup](https://github.com/youngjuning/luozhu/packages/create-rollup/)
+- [x] [create-luozhu-package](https://github.com/youngjuning/luozhu/tree/main/packages/create-luozhu-package/)
+- [x] [@luozhu/create-lerna-app](https://github.com/youngjuning/luozhu/tree/main/packages/create-lerna-app/)
+- [x] [@luozhu/create-commitlint](https://github.com/youngjuning/luozhu/tree/main/packages/create-commitlint)
+- [ ] [@luozhu/create-react-jest](https://github.com/youngjuning/luozhu/tree/main/packages/create-react-jest/)
+- [ ] [@luozhu/create-react-native-jest](https://github.com/youngjuning/luozhu/tree/main/packages/create-react-native-jest/)
+- [ ] [@luozhu/create-rollup](https://github.com/youngjuning/luozhu/tree/main/packages/create-rollup/)
 
 ## Coding Style
 

@@ -7,9 +7,9 @@
 ## Scaffold
 
 - [x] [@luozhu/template-generator](https://github.com/youngjuning/luozhu/tree/main/packages/template-generator)：A template generator based on handlebars.
-- [x] [create-luozhu-package](https://github.com/youngjuning/luozhu/tree/main/packages/create-luozhu-package/)
-- [x] [@luozhu/create-lerna-app](https://github.com/youngjuning/luozhu/tree/main/packages/create-lerna-app/)
-- [x] [@luozhu/create-commitlint](https://github.com/youngjuning/luozhu/tree/main/packages/create-commitlint)
+- [x] [create-luozhu-package](https://github.com/youngjuning/luozhu/tree/main/packages/create-luozhu-package/)：Create a luozhu package in this repo.
+- [x] [@luozhu/create-lerna-app](https://github.com/youngjuning/luozhu/tree/main/packages/create-lerna-app/)：Create a app with lerna best practice.
+- [x] [@luozhu/create-commitlint](https://github.com/youngjuning/luozhu/tree/main/packages/create-commitlint)：Init commintlint in exist project.
 - [ ] [@luozhu/create-react-jest](https://github.com/youngjuning/luozhu/tree/main/packages/create-react-jest/)
 - [ ] [@luozhu/create-react-native-jest](https://github.com/youngjuning/luozhu/tree/main/packages/create-react-native-jest/)
 - [ ] [@luozhu/create-rollup](https://github.com/youngjuning/luozhu/tree/main/packages/create-rollup/)

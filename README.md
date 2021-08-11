@@ -78,9 +78,15 @@ $ yarn add eslint -D
 
 ### pre-commit lint
 
+#### Install
+
 ```sh
 $ yarn add lint-staged yorkie -D
 ```
+
+#### Config
+
+> config file is package.json
 
 ```json
 {

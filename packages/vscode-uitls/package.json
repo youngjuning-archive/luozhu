@@ -1,0 +1,40 @@
+{
+  "name": "@luozhu/vscode-utils",
+  "version": "0.0.0",
+  "description": "Luozhu&#x27;s vscode utils",
+  "keywords": [
+    "luozhu"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngjuning/luozhu.git",
+    "directory": "packages/vscode-utils"
+  },
+  "author": {
+    "name": "洛竹",
+    "email": "youngjuning@aliyun.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngjuning/luozhu/issues"
+  },
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/vscode-utils#readme",
+  "devDependencies": {
+    "@types/vscode": "^1.59.0"
+  }
+}

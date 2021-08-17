@@ -31,7 +31,7 @@ export const getUmiContent = (
         />
         <link rel="stylesheet" href="${getDiskPath('umi.css')}" />
         <style>
-          html, body {
+          html, body, #root {
             width: 100%;
             height: 100%;
             margin: 0;

@@ -15,7 +15,7 @@ export const getUmiContent = (
   umiVersion?: string,
   rootPath = 'web'
 ) => {
-  // 获取磁盘上的资源路径
+  // 获取内容的 Uri
   const getDiskPath = (fileName: string) => {
     return webviewPanel.webview.asWebviewUri(
       vscode.Uri.file(path.join(context.extensionPath, rootPath, 'dist', fileName))

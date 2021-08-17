@@ -30,6 +30,15 @@ export const getUmiContent = (
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
         />
         <link rel="stylesheet" href="${getDiskPath('umi.css')}" />
+        <style>
+          html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+          }
+        </style>
         <script>
           //! umi version: ${umiVersion}
         </script>

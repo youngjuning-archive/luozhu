@@ -38,6 +38,27 @@ export const getUmiContent = (
             padding: 0;
             overflow: hidden;
           }
+          body.vscode-light {
+            h1, h2, h3, h4, h5, h6 {
+              color: black;
+            }
+            color: black;
+            background-color: var(--vscode-editor-background);
+          }
+          body.vscode-dark {
+            h1, h2, h3, h4, h5, h6 {
+              color: white;
+            }
+            color: white;
+            background-color: var(--vscode-editor-background);
+          }
+          body.vscode-high-contrast {
+            h1, h2, h3, h4, h5, h6 {
+              color: red;
+            }
+            color: red;
+            background-color: var(--vscode-editor-background);
+          }
         </style>
         <script>
           //! umi version: ${umiVersion}

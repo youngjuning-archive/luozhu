@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.2.2...@luozhu/vscode-utils@0.2.3) (2021-08-17)
+
+### Bug Fixes
+
+- use css ([bc257d1](https://github.com/youngjuning/luozhu/commit/bc257d112a39a3c2acf726b7c091fd1559c78cc1))
+
 ## [0.2.2](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.2.1...@luozhu/vscode-utils@0.2.2) (2021-08-17)
 
 **Note:** Version bump only for package @luozhu/vscode-utils

@@ -2,8 +2,17 @@
 import vscode from 'vscode';
 import { nanoid } from 'nanoid';
 
+export type EventType = 'requests' | 'commands';
+
+export interface EventMessage {
+  eventType: EventType;
+  eventId: string;
+  method: string;
+  params;
+}
+
 interface CallParams {
-  eventType: 'request' | 'command';
+  eventType: EventType;
   method: string;
   params;
   success: (message) => void;
@@ -54,13 +63,13 @@ export default class Channel {
   bind(listener: bindListener) {
     if (this.vscode) {
       window.addEventListener('message', async event => {
-        const message = event.data;
+        const message: EventMessage = event.data;
         const data = await listener(message);
         this.vscode.postMessage({ ...message, data });
       });
     } else {
       this.webview.onDidReceiveMessage(
-        async message => {
+        async (message: EventMessage) => {
           const data = await listener(message);
           this.webview.postMessage({ ...message, data });
         },

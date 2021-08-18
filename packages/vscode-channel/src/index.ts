@@ -16,11 +16,11 @@ export default class Channel {
   vscode: any;
   webview: vscode.Webview;
   context: vscode.ExtensionContext;
-  constructor(context?: vscode.ExtensionContext, webview?: vscode.Webview) {
+  constructor(context?: vscode.ExtensionContext, webviewPanel?: vscode.WebviewPanel) {
     // @ts-ignore
     this.vscode = typeof acquireVsCodeApi === 'function' ? acquireVsCodeApi() : null;
     if (!this.vscode) {
-      this.webview = webview;
+      this.webview = webviewPanel.webview;
       this.context = context;
     }
   }

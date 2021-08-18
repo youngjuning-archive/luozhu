@@ -35,29 +35,31 @@ export default class Channel {
     }
   }
 
-  call({ eventType, method, params, success }: CallParams) {
-    const eventId = nanoid();
+  call({ eventType, method, params }: CallParams) {
+    return new Promise(resolve => {
+      const eventId = nanoid();
 
-    if (this.vscode) {
-      this.vscode.postMessage({ eventType, eventId, method, params });
-      window.addEventListener('message', event => {
-        const message = event.data;
-        if (message.eventId === eventId) {
-          success(message);
-        }
-      });
-    } else {
-      this.webview.postMessage({ eventType, eventId, method, params });
-      this.webview.onDidReceiveMessage(
-        message => {
+      if (this.vscode) {
+        this.vscode.postMessage({ eventType, eventId, method, params });
+        window.addEventListener('message', event => {
+          const message = event.data;
           if (message.eventId === eventId) {
-            success(message);
+            resolve(message);
           }
-        },
-        undefined,
-        this.context.subscriptions
-      );
-    }
+        });
+      } else {
+        this.webview.postMessage({ eventType, eventId, method, params });
+        this.webview.onDidReceiveMessage(
+          message => {
+            if (message.eventId === eventId) {
+              resolve(message);
+            }
+          },
+          undefined,
+          this.context.subscriptions
+        );
+      }
+    });
   }
 
   bind(listener: bindListener) {

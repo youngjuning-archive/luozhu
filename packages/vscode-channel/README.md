@@ -9,5 +9,5 @@ $ yarn install @luozhu/vscode-channel
 ## Usage
 
 ```ts
-import {} from '@luozhu/vscode-channel';
+import Channel from '@luozhu/vscode-channel';
 ```

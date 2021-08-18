@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.3.0...@luozhu/vscode-channel@0.4.0) (2021-08-18)
+
+### Features
+
+- add eventType ([4760914](https://github.com/youngjuning/luozhu/commit/4760914068ab9bb09cbf293f1974f1ea08028624))
+- call 方法改成 promise ([76281f3](https://github.com/youngjuning/luozhu/commit/76281f36d57e04123944a52600a5dc8d22217775))
+
 # [0.3.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.2.0...@luozhu/vscode-channel@0.3.0) (2021-08-18)
 
 ### Features

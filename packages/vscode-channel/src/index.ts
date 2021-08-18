@@ -3,6 +3,7 @@ import vscode from 'vscode';
 import { nanoid } from 'nanoid';
 
 interface CallParams {
+  eventType: 'request' | 'command';
   method: string;
   params;
   success: (message) => void;
@@ -25,15 +26,11 @@ export default class Channel {
     }
   }
 
-  call({ method, params, success }: CallParams) {
+  call({ eventType, method, params, success }: CallParams) {
     const eventId = nanoid();
 
     if (this.vscode) {
-      this.vscode.postMessage({
-        eventId,
-        method,
-        params,
-      });
+      this.vscode.postMessage({ eventType, eventId, method, params });
       window.addEventListener('message', event => {
         const message = event.data;
         if (message.eventId === eventId) {
@@ -41,7 +38,7 @@ export default class Channel {
         }
       });
     } else {
-      this.webview.postMessage({ eventId, method, params });
+      this.webview.postMessage({ eventType, eventId, method, params });
       this.webview.onDidReceiveMessage(
         message => {
           if (message.eventId === eventId) {

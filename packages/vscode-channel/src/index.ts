@@ -19,6 +19,7 @@ export default class Channel {
   uuid: string;
 
   constructor(context?: vscode.ExtensionContext, webview?: vscode.Webview) {
+    this.uuid = nanoid();
     // @ts-ignore
     this.vscode = typeof acquireVsCodeApi === 'function' ? acquireVsCodeApi() : null;
     if (!this.vscode) {
@@ -28,7 +29,6 @@ export default class Channel {
   }
 
   call({ method, params, success }: CallParams) {
-    this.uuid = nanoid();
     if (this.vscode) {
       this.vscode.postMessage({ method, params, uuid: this.uuid });
       window.addEventListener('message', event => {

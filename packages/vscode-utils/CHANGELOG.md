@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.2.3...@luozhu/vscode-utils@0.3.0) (2021-08-18)
+
+### Features
+
+- add Channel to vscode ([cf8a3d7](https://github.com/youngjuning/luozhu/commit/cf8a3d7a891b987816313416fb8cfd845711509a))
+
 ## [0.2.3](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.2.2...@luozhu/vscode-utils@0.2.3) (2021-08-17)
 
 ### Bug Fixes

@@ -9,5 +9,5 @@ $ yarn install @luozhu/vscode-utils
 ## Usage
 
 ```ts
-import { getUmiContent } from '@luozhu/vscode-utils';
+import { getUmiContent, Channel } from '@luozhu/vscode-utils';
 ```

@@ -36,5 +36,8 @@
   "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/vscode-channel#readme",
   "devDependencies": {
     "@types/vscode": "^1.59.0"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.25"
   }
 }

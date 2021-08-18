@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import vscode from 'vscode';
+import { nanoid } from 'nanoid';
 
 interface CallParams {
   method: string;
@@ -15,6 +16,8 @@ export default class Channel {
   vscode: any;
   webview: vscode.Webview;
   context: vscode.ExtensionContext;
+  uuid: string;
+
   constructor(context?: vscode.ExtensionContext, webview?: vscode.Webview) {
     // @ts-ignore
     this.vscode = typeof acquireVsCodeApi === 'function' ? acquireVsCodeApi() : null;
@@ -25,22 +28,20 @@ export default class Channel {
   }
 
   call({ method, params, success }: CallParams) {
+    this.uuid = nanoid();
     if (this.vscode) {
-      this.vscode.postMessage({
-        method,
-        params,
-      });
+      this.vscode.postMessage({ method, params, uuid: this.uuid });
       window.addEventListener('message', event => {
         const message = event.data;
-        if (message.method === method) {
+        if (message.uuid === this.uuid) {
           success(message);
         }
       });
     } else {
-      this.webview.postMessage({ method, params });
+      this.webview.postMessage({ method, params, uuid: this.uuid });
       this.webview.onDidReceiveMessage(
         message => {
-          if (message.method === method) {
+          if (message.uuid === this.uuid) {
             success(message);
           }
         },
@@ -54,7 +55,7 @@ export default class Channel {
     if (this.vscode) {
       window.addEventListener('message', async event => {
         const message = event.data;
-        if (message.method === method) {
+        if (message.uuid === this.uuid) {
           const data = await listener(message);
           this.vscode.postMessage({ method, data });
         }
@@ -62,7 +63,7 @@ export default class Channel {
     } else {
       this.webview.onDidReceiveMessage(
         async message => {
-          if (message.method === method) {
+          if (message.uuid === this.uuid) {
             const data = await listener(message);
             this.webview.postMessage({ method, data });
           }

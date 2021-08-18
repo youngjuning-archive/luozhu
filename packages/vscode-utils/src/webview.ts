@@ -76,7 +76,15 @@ export const getUmiHTMLContent = (
 
 // 追踪当前 webview 面板
 let currentPanel: vscode.WebviewPanel | undefined;
-
+/**
+ * 获取基于 umijs 的 webview 内容
+ * @param context 扩展上下文
+ * @param viewType webview 面板的唯一标识符
+ * @param title webview 面板的标题
+ * @param iconPath webview 面板的 Icon
+ * @param umiVersion umi 版本
+ * @returns vscode.WebviewPanel
+ */
 export const createUmiWebviewPanel = (
   context: vscode.ExtensionContext,
   viewType: string,

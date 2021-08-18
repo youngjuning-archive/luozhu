@@ -1,7 +1,7 @@
 {
-  "name": "@luozhu/vscode-utils",
-  "version": "0.3.0",
-  "description": "Luozhu's vscode utils",
+  "name": "@luozhu/vscode-channel",
+  "version": "0.0.0",
+  "description": "vscode channel",
   "keywords": [
     "luozhu"
   ],
@@ -22,7 +22,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/youngjuning/luozhu.git",
-    "directory": "packages/vscode-utils"
+    "directory": "packages/vscode-channel"
   },
   "author": {
     "name": "洛竹",
@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/youngjuning/luozhu/issues"
   },
-  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/vscode-utils#readme",
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/vscode-channel#readme",
   "devDependencies": {
     "@types/vscode": "^1.59.0"
   }

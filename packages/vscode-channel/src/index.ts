@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import vscode from 'vscode';
+import { nanoid } from 'nanoid';
 
 interface CallParams {
   method: string;
@@ -25,22 +26,25 @@ export default class Channel {
   }
 
   call({ method, params, success }: CallParams) {
+    const eventId = nanoid();
+
     if (this.vscode) {
       this.vscode.postMessage({
+        eventId,
         method,
         params,
       });
       window.addEventListener('message', event => {
         const message = event.data;
-        if (message.method === method) {
+        if (message.eventId === eventId) {
           success(message);
         }
       });
     } else {
-      this.webview.postMessage({ method, params });
+      this.webview.postMessage({ eventId, method, params });
       this.webview.onDidReceiveMessage(
         message => {
-          if (message.method === method) {
+          if (message.eventId === eventId) {
             success(message);
           }
         },
@@ -50,22 +54,18 @@ export default class Channel {
     }
   }
 
-  bind(method: string, listener: bindListener) {
+  bind(listener: bindListener) {
     if (this.vscode) {
       window.addEventListener('message', async event => {
         const message = event.data;
-        if (message.method === method) {
-          const data = await listener(message);
-          this.vscode.postMessage({ method, data });
-        }
+        const data = await listener(message);
+        this.vscode.postMessage({ ...message, data });
       });
     } else {
       this.webview.onDidReceiveMessage(
         async message => {
-          if (message.method === method) {
-            const data = await listener(message);
-            this.webview.postMessage({ method, data });
-          }
+          const data = await listener(message);
+          this.webview.postMessage({ ...message, data });
         },
         undefined,
         this.context.subscriptions

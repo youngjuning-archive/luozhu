@@ -15,7 +15,6 @@ interface CallParams {
   eventType: EventType;
   method: string;
   params;
-  success: (message) => void;
 }
 
 type bindListener =

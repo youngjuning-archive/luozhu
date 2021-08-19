@@ -19,8 +19,8 @@ interface CallParams {
 
 type BindListener =
   | ((message) => Record<string, unknown>)
-  | null
-  | ((message) => Promise<Record<string, unknown> | null>);
+  | void
+  | ((message) => Promise<Record<string, unknown> | void>);
 
 export default class Channel {
   vscode: any;

@@ -5,21 +5,22 @@ import { nanoid } from 'nanoid';
 export type EventType = 'requests' | 'commands';
 
 export interface EventMessage {
-  eventType: EventType;
+  eventType?: EventType;
   eventId: string;
   method: string;
-  params;
+  params?;
 }
 
 interface CallParams {
-  eventType: EventType;
+  eventType?: EventType;
   method: string;
-  params;
+  params?;
 }
 
-type bindListener =
+type BindListener =
   | ((message) => Record<string, unknown>)
-  | ((message) => Promise<Record<string, unknown>>);
+  | null
+  | ((message) => Promise<Record<string, unknown> | null>);
 
 export default class Channel {
   vscode: any;
@@ -61,7 +62,7 @@ export default class Channel {
     });
   }
 
-  bind(listener: bindListener) {
+  bind(listener: BindListener) {
     if (this.vscode) {
       window.addEventListener('message', async event => {
         const message: EventMessage = event.data;

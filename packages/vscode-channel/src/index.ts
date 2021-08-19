@@ -65,7 +65,7 @@ export default class Channel {
     });
   }
 
-  bind(listener: BindListener) {
+  bind(listener: BindListener, vscodeApi?: typeof vscode) {
     if (this.vscode) {
       window.addEventListener('message', async event => {
         const message: EventMessage = event.data;
@@ -78,7 +78,7 @@ export default class Channel {
       this.webview.onDidReceiveMessage(
         async (message: EventMessage) => {
           if (message.eventType === 'config') {
-            this.webview.postMessage({ ...message, payload: _get(vscode, message.method) });
+            this.webview.postMessage({ ...message, payload: _get(vscodeApi, message.method) });
             return;
           }
           const data = await listener(message);

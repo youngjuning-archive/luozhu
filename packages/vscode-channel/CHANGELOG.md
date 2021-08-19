@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.4.4...@luozhu/vscode-channel@0.4.5) (2021-08-19)
+
+### Bug Fixes
+
+- BindListener type ([d90eb9e](https://github.com/youngjuning/luozhu/commit/d90eb9eadf9f4a54103cc5783c6bda51e4127939))
+
 ## [0.4.4](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.4.3...@luozhu/vscode-channel@0.4.4) (2021-08-19)
 
 ### Bug Fixes

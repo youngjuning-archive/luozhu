@@ -67,13 +67,17 @@ export default class Channel {
       window.addEventListener('message', async event => {
         const message: EventMessage = event.data;
         const data = await listener(message);
-        this.vscode.postMessage({ ...message, payload: data });
+        if (data) {
+          this.vscode.postMessage({ ...message, payload: data });
+        }
       });
     } else {
       this.webview.onDidReceiveMessage(
         async (message: EventMessage) => {
           const data = await listener(message);
-          this.webview.postMessage({ ...message, payload: data });
+          if (data) {
+            this.webview.postMessage({ ...message, payload: data });
+          }
         },
         undefined,
         this.context.subscriptions

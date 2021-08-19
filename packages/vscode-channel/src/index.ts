@@ -3,18 +3,18 @@ import vscode from 'vscode';
 import { nanoid } from 'nanoid';
 import _get from 'lodash.get';
 
-export type EventType = 'request' | 'command' | 'config';
+export type EventType = 'request' | 'command' | 'variable';
 
 export interface EventMessage {
   eventType?: EventType;
   eventId: string;
-  method: string;
+  method?: string;
   params?;
 }
 
 interface CallParams {
   eventType?: EventType;
-  method: string;
+  method?: string;
   params?;
 }
 
@@ -75,8 +75,11 @@ export default class Channel {
     } else {
       this.webview.onDidReceiveMessage(
         async (message: EventMessage) => {
-          if (message.eventType === 'config') {
-            this.webview.postMessage({ ...message, payload: _get(vscodeApi, message.method) });
+          if (message.eventType === 'variable') {
+            this.webview.postMessage({
+              ...message,
+              payload: _get(vscodeApi, message.params.variablePath),
+            });
             return;
           }
           const data = await listener(message);

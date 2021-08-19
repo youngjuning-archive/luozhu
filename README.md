@@ -14,6 +14,11 @@
 - [ ] [@luozhu/create-react-native-jest](https://github.com/youngjuning/luozhu/tree/main/packages/create-react-native-jest/)
 - [ ] [@luozhu/create-rollup](https://github.com/youngjuning/luozhu/tree/main/packages/create-rollup/)
 
+## vscode
+
+- [x] [@luozhu/vscode-utils](https://github.com/youngjuning/luozhu/tree/main/packages/vscode-utils]/)：vscode extension develop utils.
+- [x] [@luozhu/vscode-channel](https://github.com/youngjuning/luozhu/tree/main/packages/vscode-channel/)：channel for vscode communication with webview.
+
 ## Coding Style
 
 ### Editorconfig

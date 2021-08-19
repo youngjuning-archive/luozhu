@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.4.5...@luozhu/vscode-channel@0.5.0) (2021-08-19)
+
+### Features
+
+- 如果 data 不为 undefined 才回传时间 ([95b6372](https://github.com/youngjuning/luozhu/commit/95b6372b8962d8bea657bce0e9d0051a3e570ba0))
+
 ## [0.4.5](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.4.4...@luozhu/vscode-channel@0.4.5) (2021-08-19)
 
 ### Bug Fixes

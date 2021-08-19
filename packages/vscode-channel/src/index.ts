@@ -18,8 +18,7 @@ interface CallParams {
 }
 
 type BindListener =
-  | ((message) => Record<string, unknown>)
-  | void
+  | ((message) => Record<string, unknown> | void)
   | ((message) => Promise<Record<string, unknown> | void>);
 
 export default class Channel {

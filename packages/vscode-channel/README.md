@@ -22,6 +22,8 @@ const channel = new Channel(context, currentPanel);
 
 ### webview 中初始化实例
 
+> 注意：在一个会话中，`acquireVsCodeApi()` 只能调用一次。
+
 ```ts
 const channel = new Channel();
 ```

@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import vscode from 'vscode';
 import { nanoid } from 'nanoid';
+import _get from 'lodash.get';
 
-export type EventType = 'requests' | 'commands';
+export type EventType = 'request' | 'command' | 'config';
 
 export interface EventMessage {
   eventType?: EventType;
@@ -44,7 +45,9 @@ export default class Channel {
         window.addEventListener('message', event => {
           const message = event.data;
           if (message.eventId === eventId) {
-            resolve(message);
+            window.removeEventListener('message', () => {
+              resolve(message);
+            });
           }
         });
       } else {
@@ -62,7 +65,7 @@ export default class Channel {
     });
   }
 
-  bind(listener: BindListener) {
+  bind(listener: BindListener, vscodeApi?: typeof vscode) {
     if (this.vscode) {
       window.addEventListener('message', async event => {
         const message: EventMessage = event.data;
@@ -74,6 +77,10 @@ export default class Channel {
     } else {
       this.webview.onDidReceiveMessage(
         async (message: EventMessage) => {
+          if (message.eventType === 'config') {
+            this.webview.postMessage({ ...message, payload: _get(vscodeApi, message.method) });
+            return;
+          }
           const data = await listener(message);
           if (data) {
             this.webview.postMessage({ ...message, payload: data });

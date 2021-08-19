@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.4.3...@luozhu/vscode-channel@0.4.4) (2021-08-19)
+
+### Bug Fixes
+
+- fix type ([dc0a3e0](https://github.com/youngjuning/luozhu/commit/dc0a3e034baa6aa78a4eab868ec2ffc8e5f487d9))
+
 ## [0.4.3](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.4.2...@luozhu/vscode-channel@0.4.3) (2021-08-19)
 
 **Note:** Version bump only for package @luozhu/vscode-channel

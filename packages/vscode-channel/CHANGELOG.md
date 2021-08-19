@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.5.3...@luozhu/vscode-channel@0.5.4) (2021-08-19)
+
+### Bug Fixes
+
+- dont removeEventListener ([1e2d98e](https://github.com/youngjuning/luozhu/commit/1e2d98ed1d0f2e3c910f5966eefd77b27aef7354))
+
 ## [0.5.3](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.5.2...@luozhu/vscode-channel@0.5.3) (2021-08-19)
 
 ### Bug Fixes

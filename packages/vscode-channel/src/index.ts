@@ -45,9 +45,7 @@ export default class Channel {
         window.addEventListener('message', event => {
           const message = event.data;
           if (message.eventId === eventId) {
-            window.removeEventListener('message', () => {
-              resolve(message);
-            });
+            resolve(message);
           }
         });
       } else {

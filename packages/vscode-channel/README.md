@@ -61,3 +61,29 @@ channel.bind(async message => {
   }
 });
 ```
+
+## webview 获取 vscode 变量
+
+由于 JSON 序列化的原因，我们只能获取变量，没办法获取函数。如需获取函数调用后产生的值，请参考调用接口的。
+
+**webview 侧**：
+
+```ts
+const getEnv = async () => {
+  const { payload } = (await channel.call({
+    eventType: 'variable',
+    params: {
+      variablePath: 'env', // 'env.appRoot' | 'env.appName'
+    },
+  })) as any;
+  console.log('getEnv', payload);
+};
+```
+
+**vscode 侧**：
+
+内部使用 lodash.get 处理了获取和回返值，所以这里的回调并不会走。
+
+```ts
+channel.bind(() => {}, vscode);
+```

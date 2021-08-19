@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/vscode-channel#readme",
   "devDependencies": {
-    "@types/lodash": "^4.14.172",
+    "@types/lodash.get": "^4.4.6",
     "@types/vscode": "^1.59.0"
   },
   "dependencies": {

@@ -16,7 +16,7 @@ $ yarn create @luozhu/lerna-app <projectName>
 # install
 $ npm install @luozhu/create-lerna-app -g
 # usage
-$ create-lerna-app <packageName>
+$ create-lerna-app <projectName>
 # can also use in shorthand
-$ cla <packageName>
+$ cla <projectName>
 ```

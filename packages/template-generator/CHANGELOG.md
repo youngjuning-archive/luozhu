@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/youngjuning/luozhu/compare/@luozhu/template-generator@0.4.0...@luozhu/template-generator@0.4.1) (2021-08-23)
+
+
+### Bug Fixes
+
+* fs.renameSync(file, file.replace('npmrc', '.npmrc')) ([b79525f](https://github.com/youngjuning/luozhu/commit/b79525fe08e2e5de81867c8710199b9ff08952b3))
+
+
+
+
+
 # [0.4.0](https://github.com/youngjuning/luozhu/compare/@luozhu/template-generator@0.3.1...@luozhu/template-generator@0.4.0) (2021-08-23)
 
 

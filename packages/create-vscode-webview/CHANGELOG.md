@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.3.1...@luozhu/create-vscode-webview@0.3.2) (2021-08-23)
+
+
+### Bug Fixes
+
+* fs.renameSync(file, file.replace('npmrc', '.npmrc')) ([b79525f](https://github.com/youngjuning/luozhu/commit/b79525fe08e2e5de81867c8710199b9ff08952b3))
+
+
+
+
+
 ## [0.3.1](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.3.0...@luozhu/create-vscode-webview@0.3.1) (2021-08-23)
 
 **Note:** Version bump only for package @luozhu/create-vscode-webview

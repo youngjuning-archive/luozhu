@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.2.0...@luozhu/create-vscode-webview@0.2.1) (2021-08-23)
+
+**Note:** Version bump only for package @luozhu/create-vscode-webview
+
 # [0.2.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.1.2...@luozhu/create-vscode-webview@0.2.0) (2021-08-23)
 
 ### Features

@@ -37,7 +37,7 @@ const generator = async <TMeta>(
     if (file.endsWith('gitignore')) {
       fs.renameSync(file, file.replace('gitignore', '.gitignore'));
     } else if (file.endsWith('npmrc')) {
-      fs.renameSync(file, file.replace('gitignore', '.npmrc'));
+      fs.renameSync(file, file.replace('npmrc', '.npmrc'));
     }
     if (isExclude) {
       return;

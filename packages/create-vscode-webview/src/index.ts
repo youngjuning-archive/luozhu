@@ -1,6 +1,5 @@
 import { program } from 'commander';
 import chalk from 'chalk';
-import execa from 'execa';
 import inquirer from 'inquirer';
 import tmp from 'tmp-promise';
 import fs from 'fs-extra';
@@ -20,21 +19,17 @@ interface IMeta {
 }
 
 const getQuestions = (name: string) => {
-  const { stdout: author } = execa.commandSync('git config user.name');
-  const { stdout: email } = execa.commandSync('git config user.email');
-
   return [
     {
       type: 'input',
-      message: 'package name',
+      message: 'extension name',
       name: 'name',
       default: name,
     },
     {
       type: 'input',
-      message: 'version',
-      name: 'version',
-      default: '0.0.0',
+      message: 'extension displayName',
+      name: 'displayName',
     },
     {
       type: 'input',
@@ -43,28 +38,13 @@ const getQuestions = (name: string) => {
     },
     {
       type: 'input',
-      message: 'author',
-      name: 'author',
-      validate: input => {
-        if (/[/\\]/im.test(input)) {
-          console.log(` ${chalk.red('Name cannot contain special characters')}`);
-          return false;
-        }
-        return true;
-      },
-      default: author,
+      message: 'publisher',
+      name: 'publisher',
     },
     {
       type: 'input',
-      message: 'email',
-      name: 'email',
-      default: email,
-    },
-    {
-      type: 'input',
-      message: 'url',
-      name: 'url',
-      default: 'https://youngjuning.js.org',
+      message: 'repository',
+      name: 'repository',
     },
   ];
 };
@@ -74,30 +54,17 @@ const init = (): void => {
   program
     .version(packageJson.version)
     .description(packageJson.description)
-    .argument('<name>', 'package name')
-    .argument('[loc]', 'package location')
-    .action(async (name, loc) => {
+    .argument('<name>', 'extension name')
+    .action(async name => {
       const answer: IMeta = await inquirer.prompt(getQuestions(name));
       const spinner = ora(chalk.blackBright(`Creating ${name}`));
       try {
         spinner.start();
 
-        let locPath = '';
-        if (loc) {
-          locPath = loc;
-        } else if (answer.name.startsWith('@')) {
-          locPath = answer.name.split('/')[1];
-        } else {
-          locPath = answer.name;
-        }
-        answer.directory = locPath;
-
-        const rootDir = `${process.cwd()}/packages/${locPath}`;
+        const rootDir = `${process.cwd()}/${name}`;
         if (fs.existsSync(rootDir) && !(await isDirEmpty(rootDir))) {
           spinner.fail(
-            chalk.red(
-              `Cannot initialize new project because directory packages/${locPath} is not empty.`
-            )
+            chalk.red(`Cannot initialize new project because directory  ${rootDir} is not empty.`)
           );
           process.exit(0);
         }
@@ -108,13 +75,9 @@ const init = (): void => {
         await generator<IMeta>(answer, tmpdir.path);
 
         fs.copySync(tmpdir.path, rootDir);
-        execa.commandSync('yarn install', {
-          cwd: rootDir,
-          stdout: 'inherit',
-        });
 
         await tmpdir.cleanup();
-        spinner.succeed(chalk.greenBright(`The ${name} has been generated at packages/${locPath}`));
+        spinner.succeed(chalk.greenBright(`The ${name} has been generated at ${rootDir}`));
       } catch (error) {
         spinner.fail(chalk.red(error.message));
         process.exit(0);

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.1.2...@luozhu/create-vscode-webview@0.2.0) (2021-08-23)
+
+### Features
+
+- 优化模板 ([3e2f712](https://github.com/youngjuning/luozhu/commit/3e2f7128d249174d72fa1d8c9633043a744c482e))
+
 ## [0.1.2](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.1.1...@luozhu/create-vscode-webview@0.1.2) (2021-08-23)
 
 ### Bug Fixes

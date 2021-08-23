@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-vscode-webview",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Create vscode extension with webview",
   "keywords": [
     "vscode",

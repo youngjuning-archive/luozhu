@@ -1,5 +1,6 @@
 import { program } from 'commander';
 import chalk from 'chalk';
+import execa from 'execa';
 import inquirer from 'inquirer';
 import tmp from 'tmp-promise';
 import fs from 'fs-extra';
@@ -17,6 +18,7 @@ interface IMeta {
 }
 
 const getQuestions = (name: string) => {
+  const { stdout: author } = execa.commandSync('git config user.name');
   return [
     {
       type: 'input',
@@ -41,8 +43,9 @@ const getQuestions = (name: string) => {
     },
     {
       type: 'input',
-      message: 'repository',
+      message: 'repository（author/repo）',
       name: 'repository',
+      default: `${author}/${name}`,
     },
   ];
 };

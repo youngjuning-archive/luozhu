@@ -5,29 +5,19 @@
   "description": "{{description}}",
   "private": "true",
   "icon": "assets/icon.png",
-  "workspaces": [
-    "web"
-  ],
+  "workspaces": ["web"],
   "engines": {
     "vscode": "^1.59.0"
   },
-  "categories": [
-    "Other"
-  ],
-  "keywords": [
-    "umijs",
-    "webview"
-  ],
+  "categories": ["Other"],
+  "keywords": ["umijs", "webview"],
   "license": "MIT",
   "publisher": "{{publisher}}",
   "repository": {
     "type": "git",
-    "url": "{{repository}}"
+    "url": "https://github.com/{{repository}}.git"
   },
-  "activationEvents": [
-    "*",
-    "onCommand:{{name}}.start"
-  ],
+  "activationEvents": ["*", "onCommand:{{name}}.start"],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -66,12 +56,8 @@
     "commit-msg": "commitlint -e -V"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "**/*.{md,json,less}": [
-      "prettier --write"
-    ]
+    "**/*.{js,jsx,ts,tsx}": ["eslint --fix"],
+    "**/*.{md,json,less}": ["prettier --write"]
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -101,10 +87,6 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@luozhu/vscode-channel": "^0.5.5",
-    "@luozhu/vscode-utils": "^0.6.1",
-    "axios": "^0.21.1",
-    "qs": "^6.10.1",
-    "vscode-nls-i18n": "^0.2.4"
+    "@luozhu/vscode-utils": "^0.6.1"
   }
 }

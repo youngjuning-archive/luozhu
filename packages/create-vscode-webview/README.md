@@ -30,7 +30,6 @@ $ create-vscode-webview <projectName>
 - [@luozhu/vscode-utils](https://github.com/youngjuning/luozhu/tree/main/packages/vscode-utils)：vscode 扩展开发相关 utils
 - [@luozhu/vscode-channel](https://github.com/youngjuning/luozhu/tree/main/packages/vscode-channel)：vscode 和 webview 通信的 channel
 - [vscode-nls-i18n](https://www.npmjs.com/package/vscode-nls-i18n)：支持 vscode i18n 的库
-- []
 - [axios 简单封装](https://github.com/youngjuning/juejin-me/blob/main/src/utils/axios.ts)
 
 ### 相关文档

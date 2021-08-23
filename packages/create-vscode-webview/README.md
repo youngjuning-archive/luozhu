@@ -1,5 +1,7 @@
 # @luozhu/create-vscode-webview
 
+创建包含 webview 的 vscode 扩展。
+
 ## 随用随走
 
 ```sh

@@ -63,7 +63,7 @@ export const getUmiHTMLContent = (
         </style>
         <script>
           //! umi version: ${umiVersion}
-          window.vscodeEnv = ${vscode.env}
+          window.vscodeEnv = ${JSON.stringify(vscode.env)}
         </script>
       </head>
       <body>

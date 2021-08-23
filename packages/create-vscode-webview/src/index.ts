@@ -33,12 +33,12 @@ const getQuestions = (name: string) => {
     },
     {
       type: 'input',
-      message: 'description',
+      message: 'extension description',
       name: 'description',
     },
     {
       type: 'input',
-      message: 'publisher',
+      message: 'extension publisher',
       name: 'publisher',
     },
     {

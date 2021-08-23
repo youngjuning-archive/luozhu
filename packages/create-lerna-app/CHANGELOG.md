@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.3.4...@luozhu/create-lerna-app@0.3.5) (2021-08-23)
+
+**Note:** Version bump only for package @luozhu/create-lerna-app
+
+
+
+
+
 ## [0.3.4](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.3.3...@luozhu/create-lerna-app@0.3.4) (2021-08-07)
 
 **Note:** Version bump only for package @luozhu/create-lerna-app

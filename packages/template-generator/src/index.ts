@@ -36,6 +36,8 @@ const generator = async <TMeta>(
     const isExclude = exclude && micromatch.isMatch(file, exclude);
     if (file.endsWith('gitignore')) {
       fs.renameSync(file, file.replace('gitignore', '.gitignore'));
+    } else if (file.endsWith('npmrc')) {
+      fs.renameSync(file, file.replace('gitignore', '.npmrc'));
     }
     if (isExclude) {
       return;

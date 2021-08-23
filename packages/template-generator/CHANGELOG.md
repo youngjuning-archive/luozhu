@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/youngjuning/luozhu/compare/@luozhu/template-generator@0.3.1...@luozhu/template-generator@0.4.0) (2021-08-23)
+
+
+### Features
+
+* support add npmrc file ([82a6967](https://github.com/youngjuning/luozhu/commit/82a696724935a81e6adbb62a533eb8a6523017aa))
+
+
+
+
+
 ## [0.3.1](https://github.com/youngjuning/luozhu/compare/@luozhu/template-generator@0.3.0...@luozhu/template-generator@0.3.1) (2021-08-05)
 
 ### Bug Fixes

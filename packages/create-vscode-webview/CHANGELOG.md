@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.2.5...@luozhu/create-vscode-webview@0.3.0) (2021-08-23)
+
+
+### Features
+
+* support add npmrc file ([82a6967](https://github.com/youngjuning/luozhu/commit/82a696724935a81e6adbb62a533eb8a6523017aa))
+
+
+
+
+
 ## [0.2.5](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.2.4...@luozhu/create-vscode-webview@0.2.5) (2021-08-23)
 
 **Note:** Version bump only for package @luozhu/create-vscode-webview

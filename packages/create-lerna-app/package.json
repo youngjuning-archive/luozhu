@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-lerna-app",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Create lerna app",
   "keywords": [
     "yarn-create",
@@ -43,7 +43,7 @@
   "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-lerna-app#readme",
   "dependencies": {
     "@luozhu/node": "^0.0.1",
-    "@luozhu/template-generator": "^0.3.1",
+    "@luozhu/template-generator": "^0.4.0",
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
     "execa": "^5.1.1",

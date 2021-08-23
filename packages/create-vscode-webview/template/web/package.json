@@ -1,7 +1,7 @@
 {
   "name": "web",
   "version": "0.0.0",
-  "description": "web for {{name}}",
+  "description": "web for webview-panel",
   "private": true,
   "scripts": {
     "prestart": "rimraf dist",

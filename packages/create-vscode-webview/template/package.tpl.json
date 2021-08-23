@@ -24,7 +24,7 @@
       {
         "command": "{{name}}.start",
         "title": "Start",
-        "category": "{{name}}"
+        "category": "{{displayName}}"
       }
     ]
   },

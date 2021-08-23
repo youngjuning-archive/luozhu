@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.6.0...@luozhu/vscode-utils@0.6.1) (2021-08-23)
+
+### Bug Fixes
+
+- JSON stringify ([6723803](https://github.com/youngjuning/luozhu/commit/6723803d13ab15d94db1bffe1992c42a31434f62))
+
 # [0.6.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.5.1...@luozhu/vscode-utils@0.6.0) (2021-08-23)
 
 ### Features

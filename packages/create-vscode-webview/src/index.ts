@@ -10,12 +10,10 @@ import { isDirEmpty } from '@luozhu/node';
 
 interface IMeta {
   name: string;
-  version: string;
+  displayName: string;
   description: string;
-  author: string;
-  email: string;
-  url: string;
-  directory: string;
+  publisher: string;
+  repository: string;
 }
 
 const getQuestions = (name: string) => {

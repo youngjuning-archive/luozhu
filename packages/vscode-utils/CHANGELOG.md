@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.5.1...@luozhu/vscode-utils@0.6.0) (2021-08-23)
+
+### Features
+
+- add window.vscodeEnv to webview ([46269ff](https://github.com/youngjuning/luozhu/commit/46269ffea12a8833f688b117e7d0ca5a44295972))
+
 ## [0.5.1](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.5.0...@luozhu/vscode-utils@0.5.1) (2021-08-18)
 
 **Note:** Version bump only for package @luozhu/vscode-utils

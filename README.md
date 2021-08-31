@@ -13,7 +13,7 @@
 - [ ] [@luozhu/create-react-jest](https://github.com/youngjuning/luozhu/tree/main/packages/create-react-jest/)
 - [ ] [@luozhu/create-react-native-jest](https://github.com/youngjuning/luozhu/tree/main/packages/create-react-native-jest/)
 - [ ] [@luozhu/create-rollup](https://github.com/youngjuning/luozhu/tree/main/packages/create-rollup/)
-- [ ] [@luozhu/create-npm-package](https://github.com/youngjuning/luozhu/tree/main/packages/create-rollup/)
+- [ ] [@luozhu/create-npm-package](https://github.com/youngjuning/luozhu/tree/main/packages/create-npm-package/)
 
 ## vscode
 

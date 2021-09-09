@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.3.6...@luozhu/create-lerna-app@0.3.7) (2021-09-09)
+
+
+### Bug Fixes
+
+* use spawnSync ([ba443cc](https://github.com/youngjuning/luozhu/commit/ba443cc5bb9b190fdf2f6da229383ae7f1f70b43))
+
+
+
+
+
 ## [0.3.6](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.3.5...@luozhu/create-lerna-app@0.3.6) (2021-08-23)
 
 **Note:** Version bump only for package @luozhu/create-lerna-app

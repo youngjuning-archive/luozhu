@@ -1,6 +1,6 @@
 import { program } from 'commander';
 import chalk from 'chalk';
-import execa from 'execa';
+import { spawnSync } from 'child_process';
 import tmp from 'tmp-promise';
 import fs from 'fs-extra';
 import path from 'path';
@@ -30,10 +30,11 @@ const init = (): void => {
         await generator({}, tmpdir.path);
 
         fs.copySync(tmpdir.path, rootDir);
-        const { stdout } = execa.commandSync('git init', {
+        spawnSync('git init', {
+          shell: true,
           cwd: rootDir,
+          stdio: 'inherit',
         });
-        spinner.info(`${stdout}`);
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${name} has been generated!`));
       } catch (error) {

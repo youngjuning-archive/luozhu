@@ -74,10 +74,12 @@ const init = (): void => {
         await generator<IMeta>(answer, tmpdir.path);
 
         fs.copySync(tmpdir.path, rootDir);
-        const { stdout } = execa.commandSync('git init', {
+        execa.commandSync('git init', {
           cwd: rootDir,
+          shell: true,
+          stdio: 'inherit',
+          stderr: 'inherit',
         });
-        spinner.info(`${stdout}`);
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${name} has been generated at ${rootDir}`));
       } catch (error) {

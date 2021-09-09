@@ -111,6 +111,8 @@ const init = (): void => {
         execa.commandSync('yarn install', {
           cwd: rootDir,
           stdout: 'inherit',
+          stderr: 'inherit',
+          shell: true,
         });
 
         await tmpdir.cleanup();

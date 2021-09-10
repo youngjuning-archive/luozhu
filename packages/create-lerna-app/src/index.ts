@@ -31,10 +31,10 @@ const init = (): void => {
 
         fs.copySync(tmpdir.path, rootDir);
         execa.commandSync('git init', {
-          shell: true,
           cwd: rootDir,
-          stdio: 'inherit',
+          stdout: 'inherit',
           stderr: 'inherit',
+          shell: true,
         });
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${name} has been generated!`));

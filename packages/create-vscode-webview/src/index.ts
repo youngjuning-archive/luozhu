@@ -76,9 +76,9 @@ const init = (): void => {
         fs.copySync(tmpdir.path, rootDir);
         execa.commandSync('git init', {
           cwd: rootDir,
-          shell: true,
-          stdio: 'inherit',
+          stdout: 'inherit',
           stderr: 'inherit',
+          shell: true,
         });
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${name} has been generated at ${rootDir}`));

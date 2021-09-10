@@ -42,7 +42,7 @@ const init = () => {
     'yarn add commitizen cz-customizable @commitlint/cli commitlint-config-cz yorkie -D -W',
     {
       shell: true,
-      stdio: 'inherit',
+      stdout: 'inherit',
       stderr: 'inherit',
     }
   );

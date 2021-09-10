@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import path from 'path';
-import shell from 'shelljs';
+import execa from 'execa';
 
 const init = () => {
   const templateDir = path.resolve(__dirname, '../template');
@@ -38,8 +38,13 @@ const init = () => {
   };
 
   fs.writeFileSync(`${projectDir}/package.json`, JSON.stringify(config));
-  shell.exec(
-    'yarn add commitizen cz-customizable @commitlint/cli commitlint-config-cz yorkie -D -W'
+  execa.commandSync(
+    'yarn add commitizen cz-customizable @commitlint/cli commitlint-config-cz yorkie -D -W',
+    {
+      shell: true,
+      stdio: 'inherit',
+      stderr: 'inherit',
+    }
   );
 };
 

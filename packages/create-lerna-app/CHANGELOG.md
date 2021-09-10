@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.8](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.3.7...@luozhu/create-lerna-app@0.3.8) (2021-09-10)
+
+
+### Bug Fixes
+
+* fix stdio error ([bc17600](https://github.com/youngjuning/luozhu/commit/bc17600c85c6a26cdec9c9897c7a44e4e95b7b8f))
+
+
+
+
+
 ## [0.3.7](https://github.com/youngjuning/luozhu/compare/@luozhu/create-lerna-app@0.3.6...@luozhu/create-lerna-app@0.3.7) (2021-09-09)
 
 

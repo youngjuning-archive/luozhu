@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-commitlint",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "create commitlint config in your project",
   "keywords": [
     "luozhu"

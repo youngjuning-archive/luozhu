@@ -17,7 +17,7 @@ module.exports = {
    */
   bracketSpacing: true,
   /**
-   * JSX 标签闭合位置 默认 false
+   * 标签闭合位置 默认 false
    * false:
    * <div
    *  className=""
@@ -26,9 +26,9 @@ module.exports = {
    * true:
    * <div
    *  className=""
-   * style={{}} >
+   *  style={{}} >
    */
-  jsxBracketSameLine: false,
+  angleBracketSameLine: false,
   /**
    * 箭头函数参数括号 默认avoid 可选 avoid| always
    * avoid 能省略括号的时候就省略 例如x => x

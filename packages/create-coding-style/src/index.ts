@@ -50,23 +50,6 @@ const init = async () => {
         },
   };
   fs.writeFileSync(`${projectDir}/package.json`, JSON.stringify(packageJson));
-  // 拼接 .vscode/settings.json 文件
-  let originVscodeSettings = {};
-  if (!fs.existsSync(`${projectDir}/.vscode/settings.json`)) {
-    fs.createFileSync(`${projectDir}/.vscode/settings.json`);
-  } else {
-    originVscodeSettings = JSON.parse(
-      fs.readFileSync(`${projectDir}/.vscode/settings.json`, 'utf8')
-    );
-  }
-  const vscodeSettings = {
-    ...originVscodeSettings,
-    'editor.formatOnSave': false,
-    'editor.codeActionsOnSave': {
-      'source.fixAll.eslint': true,
-    },
-  };
-  fs.writeFileSync(`${projectDir}/.vscode/settings.json`, JSON.stringify(vscodeSettings, null, 2));
   // 拼接 .eslintrc.js 文件
   const prompt = new Select({
     name: 'eslintType',

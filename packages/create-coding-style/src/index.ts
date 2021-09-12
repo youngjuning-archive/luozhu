@@ -9,6 +9,13 @@ const init = async () => {
   const projectDir = `${process.cwd()}`;
   fs.copySync(templateDir, projectDir);
   console.log();
+  if (!fs.existsSync(`${projectDir}/package.json`)) {
+    execa.commandSync('npm init -y', {
+      shell: true,
+      stdout: 'inherit',
+      stderr: 'inherit',
+    });
+  }
   // 拼接 package.json 文件
   const origin = JSON.parse(fs.readFileSync(`${projectDir}/package.json`, 'utf8'));
   const packageJson = {

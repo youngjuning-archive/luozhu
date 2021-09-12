@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.4.0...@luozhu/create-coding-style@0.4.1) (2021-09-12)
+
+
+### Bug Fixes
+
+* **create-coding-style:** 删除 vscode 配置初始化 ([f690ae2](https://github.com/youngjuning/luozhu/commit/f690ae23374451b52ff34003c4f2f20c11ce3198))
+
+
+
+
+
 # [0.4.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.3.3...@luozhu/create-coding-style@0.4.0) (2021-09-12)
 
 

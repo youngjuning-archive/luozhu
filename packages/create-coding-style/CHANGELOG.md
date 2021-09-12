@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.2.0...@luozhu/create-coding-style@0.3.0) (2021-09-12)
+
+
+### Features
+
+* **create-coding-style:** 判断 package.json 是否存在 ([2865312](https://github.com/youngjuning/luozhu/commit/2865312bc5e91944046b13d712b43cf5873ee45c))
+
+
+
+
+
 # [0.2.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.1.0...@luozhu/create-coding-style@0.2.0) (2021-09-12)
 
 

@@ -10,7 +10,8 @@ $ yarn add @luozhu/prettier-config -D
 
 ## Usage
 
+### .prettierrc.js
+
 ```js
-// .prettierrc.js
-module.exports = require("@luozhu/prettier-config");
+module.exports = require('@luozhu/prettier-config');
 ```

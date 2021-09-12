@@ -1,7 +1,7 @@
 {
   "name": "@luozhu/node",
   "version": "0.0.1",
-  "description": "nodejs utils",
+  "description": "Luozhu's nodejs utils",
   "keywords": [
     "luozhu"
   ],

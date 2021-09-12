@@ -1,7 +1,7 @@
 {
   "name": "@luozhu/eslint-rules",
   "version": "1.4.0",
-  "description": "Luozhu's prettier config",
+  "description": "Luozhu's eslint rules",
   "keywords": [
     "luozhu",
     "eslint",

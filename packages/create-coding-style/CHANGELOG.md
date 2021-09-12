@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.3.3...@luozhu/create-coding-style@0.4.0) (2021-09-12)
+
+
+### Features
+
+* **create-coding-style:** 判断 eslint 配置是不是已经存在 ([4b70f74](https://github.com/youngjuning/luozhu/commit/4b70f740943e06cf02a977b3a931cfb90bb0f1ba))
+
+
+
+
+
 ## [0.3.3](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.3.2...@luozhu/create-coding-style@0.3.3) (2021-09-12)
 
 

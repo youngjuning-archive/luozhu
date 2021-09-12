@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.1.0...@luozhu/create-coding-style@0.2.0) (2021-09-12)
+
+
+### Bug Fixes
+
+* **create-coding-style:** fix eslint style ([8fcf543](https://github.com/youngjuning/luozhu/commit/8fcf5433d2f7628a361461e9eae03d12f5c52870))
+
+
+### Features
+
+* **create-coding-style:** add lint-stage and vscode settings ([db6e781](https://github.com/youngjuning/luozhu/commit/db6e7815837aa4bc832f74b389b1bc2869d641eb))
+
+
+
+
+
 # 0.1.0 (2021-09-12)
 
 

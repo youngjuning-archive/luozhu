@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-react-native@1.4.0...@luozhu/eslint-config-react-native@1.4.1) (2021-09-12)
+
+**Note:** Version bump only for package @luozhu/eslint-config-react-native
+
+
+
+
+
 # [1.4.0](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-react-native@1.2.2...@luozhu/eslint-config-react-native@1.4.0) (2021-08-04)
 
 ### Features

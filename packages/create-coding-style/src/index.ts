@@ -1,12 +1,22 @@
 import fs from 'fs-extra';
 import path from 'path';
 import execa from 'execa';
+import chalk from 'chalk';
 
 const { Select } = require('enquirer');
 
 const init = async () => {
   const templateDir = path.resolve(__dirname, '../template');
   const projectDir = `${process.cwd()}`;
+  if (
+    fs.existsSync(`${projectDir}/.eslintrc.js`) ||
+    fs.existsSync(`${projectDir}/.eslintrc.json`)
+  ) {
+    console.log(
+      chalk.yellow('The project already has eslint configuration, please reset it first.')
+    );
+    process.exit(1);
+  }
   fs.copySync(templateDir, projectDir);
   console.log();
   if (!fs.existsSync(`${projectDir}/package.json`)) {

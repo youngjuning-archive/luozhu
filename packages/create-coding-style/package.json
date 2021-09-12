@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-coding-style",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Init coding style in exist project",
   "keywords": [
     "luozhu",

@@ -41,6 +41,9 @@ const init = async () => {
   };
   fs.writeFileSync(`${projectDir}/package.json`, JSON.stringify(packageJson));
   // 拼接 .vscode/settings.json 文件
+  if (!fs.existsSync(`${projectDir}/.vscode/settings.json`)) {
+    fs.createFileSync(`${projectDir}/.vscode/settings.json`);
+  }
   const originVscodeSettings = JSON.parse(
     fs.readFileSync(`${projectDir}/.vscode/settings.json`, 'utf8')
   );

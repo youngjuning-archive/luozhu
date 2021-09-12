@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.6](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.5.5...@luozhu/vscode-channel@0.5.6) (2021-09-12)
+
+
+### Bug Fixes
+
+* **vscode-channel:** add WebviewApi types([#1](https://github.com/youngjuning/luozhu/issues/1)) ([87bc2f7](https://github.com/youngjuning/luozhu/commit/87bc2f796e494de6eadb1db8e0a8a31919f778fb))
+
+
+
+
+
 ## [0.5.5](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.5.4...@luozhu/vscode-channel@0.5.5) (2021-08-19)
 
 **Note:** Version bump only for package @luozhu/vscode-channel

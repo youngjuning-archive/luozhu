@@ -61,14 +61,7 @@ const init = async () => {
   const prompt = new Select({
     name: 'eslintType',
     message: 'Pick a eslint type',
-    choices: [
-      'base',
-      'typescript',
-      'react',
-      'react-typescript',
-      'react-native',
-      'react-native-typescript',
-    ],
+    choices: ['base', 'typescript', 'react', 'react-typescript', 'react-native'],
   });
   const eslintType = await prompt.run();
   const eslintConfig = `module.exports = {

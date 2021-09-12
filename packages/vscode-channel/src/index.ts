@@ -2,6 +2,7 @@
 import vscode from 'vscode';
 import { nanoid } from 'nanoid';
 import _get from 'lodash.get';
+import { WebviewApi } from 'vscode-webview';
 
 export type EventType = 'request' | 'command' | 'variable';
 
@@ -23,12 +24,11 @@ type BindListener =
   | ((message) => Promise<Record<string, unknown>>)
   | ((message) => void);
 
-export default class Channel {
-  vscode: any;
+export default class Channel<WebViewStateType = unknown> {
+  vscode: WebviewApi<WebViewStateType>;
   webview: vscode.Webview;
   context: vscode.ExtensionContext;
   constructor(context?: vscode.ExtensionContext, webviewPanel?: vscode.WebviewPanel) {
-    // @ts-ignore
     this.vscode = typeof acquireVsCodeApi === 'function' ? acquireVsCodeApi() : null;
     if (!this.vscode) {
       this.webview = webviewPanel.webview;

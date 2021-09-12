@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.3.0...@luozhu/create-coding-style@0.3.1) (2021-09-12)
+
+
+### Bug Fixes
+
+* **create-coding-style:** 判断 vscode settings 是否存在 ([f9ee63e](https://github.com/youngjuning/luozhu/commit/f9ee63e8ea03921cdcc25f37de01a8de19f1d53f))
+
+
+
+
+
 # [0.3.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-coding-style@0.2.0...@luozhu/create-coding-style@0.3.0) (2021-09-12)
 
 

@@ -1,7 +1,7 @@
 <div align="center">
   <h1><code>@luozhu/🎋</code></h1>
   <img alt="" src="https://user-images.githubusercontent.com/13204332/128195385-ed8af07f-78a8-4254-937a-56c816712575.png" width="200"/>
-  <p>Luozhu's practice in Front End Engineering and Components Development.</p>
+  <p>Luozhu's practice in Front End Engineering、Plugin Development and Components Development.</p>
 </div>
 
 ## common

@@ -1,0 +1,51 @@
+{
+  "name": "@luozhu/create-coding-style",
+  "version": "0.0.0",
+  "description": "Init coding style in exist project",
+  "keywords": [
+    "luozhu",
+    "eslint",
+    "prettier",
+    "yorkie",
+    "lint-stage",
+    "editorconfig"
+  ],
+  "files": [
+    "lib",
+    "template"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "create-coding-style": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngjuning/luozhu.git",
+    "directory": "packages/create-coding-style"
+  },
+  "author": {
+    "name": "杨俊宁",
+    "email": "youngjuning@aliyun.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngjuning/luozhu/issues"
+  },
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-coding-style#readme",
+  "dependencies": {
+    "enquirer": "^2.3.6",
+    "execa": "^5.1.1",
+    "fs-extra": "^10.0.0"
+  }
+}

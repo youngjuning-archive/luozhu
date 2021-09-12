@@ -23,9 +23,9 @@ const init = async () => {
   });
   const eslintType = await prompt.run();
   const eslintConfig = `module.exports = {
-    root: true,
-    extends: ['@luozhu/eslint-config-${eslintType}'],
-  };`;
+  root: true,
+  extends: ['@luozhu/eslint-config-${eslintType}'],
+};`;
 
   fs.writeFileSync(`${projectDir}/.eslintrc.js`, eslintConfig);
   execa.commandSync(

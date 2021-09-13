@@ -17,13 +17,12 @@ interface IMeta {
   repository: string;
 }
 
-const getQuestions = (name: string) => {
+const getQuestions = () => {
   return [
     {
       type: 'input',
       message: 'extension name',
       name: 'name',
-      default: name,
     },
     {
       type: 'input',
@@ -53,8 +52,8 @@ const init = (): void => {
   program
     .version(packageJson.version)
     .description(packageJson.description)
-    .action(async name => {
-      const answer: IMeta = await inquirer.prompt(getQuestions(name));
+    .action(async () => {
+      const answer: IMeta = await inquirer.prompt(getQuestions());
       const spinner = ora(chalk.blackBright(`Creating ${name}`));
       try {
         spinner.start();

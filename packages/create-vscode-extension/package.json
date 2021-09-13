@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-vscode-extension",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "CLuozhu's vscode extension template.",
   "keywords": [
     "vscode",

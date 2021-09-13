@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.6.1...@luozhu/create-vscode-webview@0.6.2) (2021-09-13)
+
+
+### Bug Fixes
+
+* fix name not defined error ([f4bbd90](https://github.com/youngjuning/luozhu/commit/f4bbd902f575f96f45c304771ca53414d489c4e6))
+
+
+
+
+
 ## [0.6.1](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.6.0...@luozhu/create-vscode-webview@0.6.1) (2021-09-13)
 
 

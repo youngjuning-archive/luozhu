@@ -1,5 +1,7 @@
 # @luozhu/template-generator
 
+A template generator based on handlebars.
+
 ## Install
 
 ```sh
@@ -16,13 +18,31 @@ $ yarn add @luozhu/template-generator
 
 ```ts
 const generator = require('@luozhu/template-generator');
+// 编译当前目录下所有符合 `**/*.tpl.*` 模式的文件
 generator(
   {
     name: '洛竹',
-  }, // 必传，数据模型
-  './tpl', // 必传，项目根目录
-  { // 可选，配置项
-    tplSuffix: 'tpl',
+  },
+  process.cwd()
+);
+// 编译当前目录下所有文件
+generator(
+  {
+    name: '洛竹',
+  },
+  process.cwd()
+  {
+    tplSuffix: false
+  }
+);
+// 编译当前目录下所有文件（但是排除 .js 结尾的文件）
+generator(
+  {
+    name: '洛竹',
+  },
+  process.cwd()
+  {
+    tplSuffix: false,
     exclude: ['**/*.js'],
   }
 );

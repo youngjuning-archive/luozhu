@@ -28,7 +28,7 @@
 - [@luozhu/prettier-config](https://github.com/youngjuning/luozhu/tree/main/packages/prettier-config) - Luozhu's prettier config.
 - [@luozhu/eslint-rules](https://github.com/youngjuning/luozhu/tree/main/packages/eslint-rules) - Luozhu's eslint rules.
 - [@luozhu/create-commitlint](https://github.com/youngjuning/luozhu/tree/main/packages/create-commitlint) - Init commintlint in exist project.
-- [@luozhu/create-coding-style](https://github.com/youngjuning/luozhu/tree/main/packages/create-eslint) - Init coding style in exist project.
+- [@luozhu/create-coding-style](https://github.com/youngjuning/luozhu/tree/main/packages/create-coding-style) - Init coding style in exist project.
 
 ## vscode
 

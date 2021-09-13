@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.7](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.5.6...@luozhu/vscode-channel@0.5.7) (2021-09-13)
+
+
+### Bug Fixes
+
+* 保持接口一致性 ([f0271bb](https://github.com/youngjuning/luozhu/commit/f0271bb4042d15a35f78f1962fa2c96477ccd4ad))
+
+
+
+
+
 ## [0.5.6](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.5.5...@luozhu/vscode-channel@0.5.6) (2021-09-12)
 
 

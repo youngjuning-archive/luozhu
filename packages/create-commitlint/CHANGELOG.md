@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-commitlint@0.1.6...@luozhu/create-commitlint@0.2.0) (2021-09-13)
+
+
+### Features
+
+* use .commitlintrc.js instead of commitlint.config.js ([3be71ee](https://github.com/youngjuning/luozhu/commit/3be71eeb0ddf8907ec03e18dc1e07237d819fb5f))
+
+
+
+
+
 ## [0.1.6](https://github.com/youngjuning/luozhu/compare/@luozhu/create-commitlint@0.1.5...@luozhu/create-commitlint@0.1.6) (2021-09-10)
 
 

@@ -54,11 +54,11 @@ const init = (): void => {
     .description(packageJson.description)
     .action(async () => {
       const answer: IMeta = await inquirer.prompt(getQuestions());
-      const spinner = ora(chalk.blackBright(`Creating ${name}`));
+      const spinner = ora(chalk.blackBright(`Creating ${answer.name}`));
       try {
         spinner.start();
 
-        const rootDir = `${process.cwd()}/${name}`;
+        const rootDir = `${process.cwd()}/${answer.name}`;
         if (fs.existsSync(rootDir) && !(await isDirEmpty(rootDir))) {
           spinner.fail(
             chalk.red(`Cannot initialize new project because directory  ${rootDir} is not empty.`)
@@ -79,7 +79,7 @@ const init = (): void => {
           shell: true,
         });
         await tmpdir.cleanup();
-        spinner.succeed(chalk.greenBright(`The ${name} has been generated at ${rootDir}`));
+        spinner.succeed(chalk.greenBright(`The ${answer.name} has been generated at ${rootDir}`));
       } catch (error) {
         spinner.fail(chalk.red(error.message));
         process.exit(0);

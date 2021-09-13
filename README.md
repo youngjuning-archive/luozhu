@@ -35,4 +35,4 @@
 - [@luozhu/vscode-utils](https://github.com/youngjuning/luozhu/tree/main/packages/vscode-utils]/) - vscode extension develop utils.
 - [@luozhu/vscode-channel](https://github.com/youngjuning/luozhu/tree/main/packages/vscode-channel/) - channel for vscode communication with webview.
 - [@luozhu/create-vscode-webview](https://github.com/youngjuning/luozhu/tree/main/packages/create-vscode-webview/) - vscode webview extension template.
-- [ ] [@luozhu/create-vscode-custom-editor](https://github.com/youngjuning/luozhu/tree/main/packages/create-vscode-custom-editor/) - vscode custom editor extension template.
+- [ ] [@luozhu/create-vscode-extension](https://github.com/youngjuning/luozhu/tree/main/packages/create-vscode-extension/) - create vscode extension template.

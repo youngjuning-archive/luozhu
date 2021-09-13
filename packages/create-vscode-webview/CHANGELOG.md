@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.4.3...@luozhu/create-vscode-webview@0.5.0) (2021-09-13)
+
+
+### Features
+
+* use .commitlintrc.js instead of commitlint.config.js ([3be71ee](https://github.com/youngjuning/luozhu/commit/3be71eeb0ddf8907ec03e18dc1e07237d819fb5f))
+
+
+
+
+
 ## [0.4.3](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.4.2...@luozhu/create-vscode-webview@0.4.3) (2021-09-12)
 
 **Note:** Version bump only for package @luozhu/create-vscode-webview

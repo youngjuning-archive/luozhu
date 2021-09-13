@@ -53,6 +53,7 @@ const init = (): void => {
     .version(packageJson.version)
     .description(packageJson.description)
     .action(async () => {
+      console.log();
       const answer: IMeta = await inquirer.prompt(getQuestions());
       const spinner = ora(chalk.blackBright(`Creating ${answer.name}`));
       try {

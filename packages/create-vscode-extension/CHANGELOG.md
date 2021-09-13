@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-extension@0.2.0...@luozhu/create-vscode-extension@0.2.1) (2021-09-13)
+
+
+### Bug Fixes
+
+* remove default name ([5e535e3](https://github.com/youngjuning/luozhu/commit/5e535e31d90aff297314a6161a16101eb2cfd896))
+
+
+
+
+
 # [0.2.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-extension@0.1.0...@luozhu/create-vscode-extension@0.2.0) (2021-09-13)
 
 

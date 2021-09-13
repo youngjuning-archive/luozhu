@@ -36,8 +36,6 @@ channel.call({ method: 'showAuthor' });
 
 ### 接收指令
 
-`Channel.bind` 方法支持会根据回调函数是否返回 void 来决定事件是全双工还是单工。比如需要在 webview 中调用接口或者获取 vscode 配置信息，那么就需要在 `Channel.bind` 的回调函数中返回数据，Channel 会通过发送事件触发 `Channel.call` 中注册的监听器来实现全双工。
-
 ```ts
 import { Modal } from 'antd';
 ...
@@ -62,9 +60,11 @@ channel.bind(async message => {
 });
 ```
 
+`Channel.bind` 方法支持根据回调函数是否返回 void 来决定事件是全双工还是单工。比如需要在 webview 中调用接口或者获取 vscode 配置信息，那么就需要在 `Channel.bind` 的回调函数中返回数据，Channel 会通过发送事件触发 `Channel.call` 中注册的监听器来实现全双工。
+
 ## webview 获取 vscode 变量
 
-由于 JSON 序列化的原因，我们只能获取变量，没办法获取函数。如需获取函数调用后产生的值，请参考调用接口的。
+由于 JSON 序列化的原因，我们只能获取变量，没办法获取函数。
 
 **webview 侧**：
 
@@ -82,8 +82,10 @@ const getEnv = async () => {
 
 **vscode 侧**：
 
-内部使用 lodash.get 处理了获取和回返值，所以这里的回调并不会走。
+内部使用 lodash.get 处理了获取和回返值，所以这里回调里可以不用返回任何值。
 
 ```ts
-channel.bind(() => {}, vscode);
+channel.bind(message => {
+  // do something
+}, vscode);
 ```

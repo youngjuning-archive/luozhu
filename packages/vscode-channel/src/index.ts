@@ -80,6 +80,7 @@ export default class Channel<WebViewStateType = unknown> {
               ...message,
               payload: _get(vscodeApi, message.params.variablePath),
             });
+            await listener(message);
             return;
           }
           const data = await listener(message);

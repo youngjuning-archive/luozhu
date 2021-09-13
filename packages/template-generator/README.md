@@ -19,9 +19,9 @@ const generator = require('@luozhu/template-generator');
 generator(
   {
     name: '洛竹',
-  },
-  './tpl',
-  {
+  }, // 必传，数据模型
+  './tpl', // 必传，项目根目录
+  { // 可选，配置项
     tplSuffix: 'tpl',
     exclude: ['**/*.js'],
   }

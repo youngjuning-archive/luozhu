@@ -5,11 +5,11 @@ Luozhu's vscode extension template.
 ## 随用随走
 
 ```sh
-$ npx @luozhu/create-vscode-extension <projectName>
+$ npx @luozhu/create-vscode-extension
 # 或者
-$ npm init @luozhu/create-vscode-extension <projectName>
+$ npm init @luozhu/create-vscode-extension
 # 或者
-$ yarn create @luozhu/create-vscode-extension <projectName>
+$ yarn create @luozhu/create-vscode-extension
 ```
 
 ## 全局安装
@@ -18,7 +18,7 @@ $ yarn create @luozhu/create-vscode-extension <projectName>
 # 安装
 $ npm install @luozhu/create-vscode-extension -g
 # 使用
-$ create-vscode-extension <projectName>
+$ create-vscode-extension
 ```
 
 ## 开发前必看

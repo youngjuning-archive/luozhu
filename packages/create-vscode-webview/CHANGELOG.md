@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.5.0...@luozhu/create-vscode-webview@0.6.0) (2021-09-13)
+
+
+### Features
+
+* remove name argument ([8b8344e](https://github.com/youngjuning/luozhu/commit/8b8344ea295a7bff2827735b0c9d347e0e4f1176))
+
+
+
+
+
 # [0.5.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.4.3...@luozhu/create-vscode-webview@0.5.0) (2021-09-13)
 
 

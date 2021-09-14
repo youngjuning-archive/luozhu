@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.7.1...@luozhu/vscode-utils@0.7.2) (2021-09-14)
+
+
+### Bug Fixes
+
+* add options ([85ce63f](https://github.com/youngjuning/luozhu/commit/85ce63f412b1b572711f77e6d6a8f95fd2851fa7))
+
+
+
+
+
 ## [0.7.1](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.7.0...@luozhu/vscode-utils@0.7.1) (2021-09-14)
 
 

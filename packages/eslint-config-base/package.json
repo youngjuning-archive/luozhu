@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/eslint-config-base",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "Luozhu's base eslint config",
   "keywords": [
     "luozhu",

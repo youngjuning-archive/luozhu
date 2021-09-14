@@ -6,7 +6,14 @@
 yarn add -D eslint prettier @luozhu/eslint-config-base @luozhu/prettier-config lint-staged yorkie
 ```
 
-## Usage
+## 自动配置
+
+```sh
+yarn create @luozhu/create-coding-style
+# 类型选择 base
+```
+
+## 手动配置
 
 ### .eslintrc.js
 

@@ -5,18 +5,22 @@ import path from 'path';
  * 获取基于 umijs 的 webview 内容
  * @param context 扩展上下文
  * @param webviewPanel webview 面板对象
- * @param rootPath webview 所在路径，默认 web
+ * @param options 配置项
  * @returns string
  */
 export const getUmiHTMLContent = (
   context: vscode.ExtensionContext,
   webviewPanel: vscode.WebviewPanel,
-  rootPath = 'web'
+  options?: {
+    rootPath?: 'web';
+    title?: 'umijs';
+    style?: '';
+  }
 ): string => {
   // 获取内容的 Uri
   const getDiskPath = (fileName: string) => {
     return webviewPanel.webview.asWebviewUri(
-      vscode.Uri.file(path.join(context.extensionPath, rootPath, 'dist', fileName))
+      vscode.Uri.file(path.join(context.extensionPath, options.rootPath, 'dist', fileName))
     );
   };
   // eslint-disable-next-line import/no-unresolved
@@ -30,7 +34,7 @@ export const getUmiHTMLContent = (
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
         />
-        <title>umijs</title>
+        <title>${options.title}</title>
         <link rel="stylesheet" href="${getDiskPath('umi.css')}" />
         <style>
           html, body, #root {
@@ -62,6 +66,7 @@ export const getUmiHTMLContent = (
           body.vscode-high-contrast h1, h2, h3, h4, h5, h6 {
             color: red;
           }
+          ${options.style}
         </style>
         <script>
           //! umi version: ${umiVersion}
@@ -85,15 +90,13 @@ let currentPanel: vscode.WebviewPanel | undefined;
  * @param viewType webview 面板的唯一标识符
  * @param title webview 面板的标题
  * @param iconPath webview 面板的 Icon
- * @param umiVersion umi 版本
  * @returns vscode.WebviewPanel
  */
 export const createUmiWebviewPanel = (
   context: vscode.ExtensionContext,
   viewType: string,
   title: string,
-  iconPath: string,
-  umiVersion?: string
+  iconPath: string
 ) => {
   const columnToShowIn = vscode.window.activeTextEditor
     ? vscode.window.activeTextEditor.viewColumn
@@ -117,7 +120,7 @@ export const createUmiWebviewPanel = (
     // 设置 Logo
     currentPanel.iconPath = vscode.Uri.file(path.join(context.extensionPath, iconPath));
     // 设置 HTML 内容
-    currentPanel.webview.html = getUmiHTMLContent(context, currentPanel, umiVersion);
+    currentPanel.webview.html = getUmiHTMLContent(context, currentPanel);
   }
   // 当前面板被关闭后重置
   currentPanel.onDidDispose(

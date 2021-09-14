@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.7.0...@luozhu/vscode-utils@0.7.1) (2021-09-14)
+
+
+### Bug Fixes
+
+* add title and require umi version ([5aaacdc](https://github.com/youngjuning/luozhu/commit/5aaacdc1d4c443be432fe3bed0b6195d01d41369))
+
+
+
+
+
 # [0.7.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.6.1...@luozhu/vscode-utils@0.7.0) (2021-09-14)
 
 

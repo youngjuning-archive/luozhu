@@ -14,7 +14,7 @@ module.exports = {
       object: true,
     },
   ],
-  'no-unused-vars': 1,
+  'no-unused-vars': [1, { argsIgnorePattern: '^_' }],
   'no-useless-constructor': 1,
   'global-require': 0,
   'max-classes-per-file': 0,

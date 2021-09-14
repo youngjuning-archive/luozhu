@@ -6,7 +6,14 @@
 $ yarn add -D @luozhu/eslint-config-react-typescript eslint prettier typescript @luozhu/prettier-config lint-staged yorkie
 ```
 
-## Usage
+## 自动配置
+
+```sh
+yarn create @luozhu/create-coding-style
+# 类型选择 react-typescript
+```
+
+## 手动配置
 
 ### .eslintrc.js
 

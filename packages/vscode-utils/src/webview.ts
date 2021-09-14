@@ -1,5 +1,4 @@
 import vscode from 'vscode';
-import execa from 'execa';
 import path from 'path';
 
 /**
@@ -20,7 +19,8 @@ export const getUmiHTMLContent = (
       vscode.Uri.file(path.join(context.extensionPath, rootPath, 'dist', fileName))
     );
   };
-  const { stdout: umiVersion } = execa.commandSync('umi --version');
+  // eslint-disable-next-line import/no-unresolved
+  const umiVersion = require('../../../umi/package.json').version;
 
   return `
     <html>
@@ -30,6 +30,7 @@ export const getUmiHTMLContent = (
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
         />
+        <title>umijs</title>
         <link rel="stylesheet" href="${getDiskPath('umi.css')}" />
         <style>
           html, body, #root {

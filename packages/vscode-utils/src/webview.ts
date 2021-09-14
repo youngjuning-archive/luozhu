@@ -1,4 +1,5 @@
 import vscode from 'vscode';
+import execa from 'execa';
 import path from 'path';
 
 /**
@@ -6,13 +7,11 @@ import path from 'path';
  * @param context 扩展上下文
  * @param webviewPanel webview 面板对象
  * @param rootPath webview 所在路径，默认 web
- * @param umiVersion umi 版本
  * @returns string
  */
 export const getUmiHTMLContent = (
   context: vscode.ExtensionContext,
   webviewPanel: vscode.WebviewPanel,
-  umiVersion?: string,
   rootPath = 'web'
 ): string => {
   // 获取内容的 Uri
@@ -21,6 +20,8 @@ export const getUmiHTMLContent = (
       vscode.Uri.file(path.join(context.extensionPath, rootPath, 'dist', fileName))
     );
   };
+  const { stdout: umiVersion } = execa.commandSync('umi --version');
+
   return `
     <html>
       <head>

@@ -1,7 +1,7 @@
 {
-  "name": "@luozhu/create-vscode-extension",
-  "version": "0.3.2",
-  "description": "Luozhu's vscode extension template.",
+  "name": "@luozhu/create-vscode-preview",
+  "version": "0.0.0",
+  "description": "Luozhu's vscode preview extension template.",
   "keywords": [
     "vscode",
     "luozhu",
@@ -28,7 +28,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/youngjuning/luozhu.git",
-    "directory": "packages/create-vscode-extension"
+    "directory": "packages/create-vscode-preview"
   },
   "author": {
     "name": "洛竹",
@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/youngjuning/luozhu/issues"
   },
-  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-vscode-extension#readme",
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-vscode-preview#readme",
   "dependencies": {
     "@luozhu/node": "^0.0.2",
     "@luozhu/template-generator": "^0.4.2",

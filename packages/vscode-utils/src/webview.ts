@@ -12,15 +12,18 @@ export const getUmiHTMLContent = (
   context: vscode.ExtensionContext,
   webviewPanel: vscode.WebviewPanel,
   options?: {
-    rootPath?: 'web';
-    title?: 'umijs';
-    style?: '';
+    rootPath?: string;
+    title?: string;
+    style?: string;
   }
 ): string => {
+  const title = options.title || 'umijs';
+  const rootPath = options.rootPath || 'web';
+  const style = options.style || '';
   // 获取内容的 Uri
   const getDiskPath = (fileName: string) => {
     return webviewPanel.webview.asWebviewUri(
-      vscode.Uri.file(path.join(context.extensionPath, options.rootPath, 'dist', fileName))
+      vscode.Uri.file(path.join(context.extensionPath, rootPath, 'dist', fileName))
     );
   };
   // eslint-disable-next-line import/no-unresolved
@@ -34,7 +37,7 @@ export const getUmiHTMLContent = (
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
         />
-        <title>${options.title}</title>
+        <title>${title}</title>
         <link rel="stylesheet" href="${getDiskPath('umi.css')}" />
         <style>
           html, body, #root {
@@ -66,7 +69,7 @@ export const getUmiHTMLContent = (
           body.vscode-high-contrast h1, h2, h3, h4, h5, h6 {
             color: red;
           }
-          ${options.style}
+          ${style}
         </style>
         <script>
           //! umi version: ${umiVersion}

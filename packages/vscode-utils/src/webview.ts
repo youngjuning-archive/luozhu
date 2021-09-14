@@ -14,7 +14,7 @@ export const getUmiHTMLContent = (
   webviewPanel: vscode.WebviewPanel,
   umiVersion?: string,
   rootPath = 'web'
-) => {
+): string => {
   // 获取内容的 Uri
   const getDiskPath = (fileName: string) => {
     return webviewPanel.webview.asWebviewUri(

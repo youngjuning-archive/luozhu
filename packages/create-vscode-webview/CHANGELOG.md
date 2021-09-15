@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.6.5...@luozhu/create-vscode-webview@0.7.0) (2021-09-15)
+
+
+### Features
+
+* window.vscodeEnv -> window.vsCode ([210c0bc](https://github.com/youngjuning/luozhu/commit/210c0bcfb8d397370caf7068ace6173c0bf4b41d))
+
+
+
+
+
 ## [0.6.5](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.6.4...@luozhu/create-vscode-webview@0.6.5) (2021-09-14)
 
 

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.5.7...@luozhu/vscode-channel@0.6.0) (2021-09-15)
+
+
+### Bug Fixes
+
+* **@luozhu/vscode-channel:** remove listener ([d22cb77](https://github.com/youngjuning/luozhu/commit/d22cb777e124b20ab122d03b09e58961d75816cd))
+
+
+### Features
+
+* **@luozhu/vscode-channel:** add methond params to bind method ([0035d20](https://github.com/youngjuning/luozhu/commit/0035d20794b4c9f8c09c4ad83b9aa43ad676ae1c))
+
+
+### BREAKING CHANGES
+
+* **@luozhu/vscode-channel:** add method param to bind
+
+
+
+
+
 ## [0.5.7](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.5.6...@luozhu/vscode-channel@0.5.7) (2021-09-13)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-vscode-preview",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Luozhu's vscode preview extension template.",
   "keywords": [
     "vscode",

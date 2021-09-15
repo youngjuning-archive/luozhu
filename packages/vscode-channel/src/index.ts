@@ -3,10 +3,10 @@ import vscode from 'vscode';
 import { nanoid } from 'nanoid';
 import { WebviewApi } from 'vscode-webview';
 
-export interface ChannelEventMessage {
+export interface ChannelEventMessage<Params> {
   eventId: string;
   method?: string;
-  params?;
+  params?: Params;
 }
 
 type BindListener =
@@ -26,7 +26,7 @@ export default class Channel<WebViewStateType = unknown> {
     }
   }
 
-  call(method: string, params) {
+  call<T>(method: string, params: T): Promise<void | ChannelEventMessage<T>> {
     return new Promise(resolve => {
       const eventId = nanoid();
 
@@ -34,7 +34,7 @@ export default class Channel<WebViewStateType = unknown> {
         this.vscode.postMessage({ eventId, method, params });
 
         const listener = event => {
-          const message: ChannelEventMessage = event.data;
+          const message: ChannelEventMessage<T> = event.data;
           if (message.eventId === eventId) {
             resolve(message);
             window.removeEventListener('message', listener);
@@ -58,10 +58,10 @@ export default class Channel<WebViewStateType = unknown> {
     });
   }
 
-  bind(method: string, listener: BindListener) {
+  bind<T>(method: string, listener: BindListener): void {
     if (this.vscode) {
       window.addEventListener('message', async event => {
-        const message: ChannelEventMessage = event.data;
+        const message: ChannelEventMessage<T> = event.data;
         if (method === message.method) {
           const data = await listener(message);
           if (data) {
@@ -71,7 +71,7 @@ export default class Channel<WebViewStateType = unknown> {
       });
     } else {
       this.webview.onDidReceiveMessage(
-        async (message: ChannelEventMessage) => {
+        async (message: ChannelEventMessage<T>) => {
           if (method === message.method) {
             const data = await listener(message);
             if (data) {

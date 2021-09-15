@@ -9,10 +9,10 @@ export interface ChannelEventMessage<Params> {
   params?: Params;
 }
 
-type BindListener =
-  | ((message) => Record<string, unknown>)
-  | ((message) => Promise<Record<string, unknown>>)
-  | ((message) => void);
+type BindListener<Message> =
+  | ((message: Message) => Record<string, unknown>)
+  | ((message: Message) => Promise<Record<string, unknown>>)
+  | ((message: Message) => void);
 
 export default class Channel<WebViewStateType = unknown> {
   vscode: WebviewApi<WebViewStateType>;
@@ -58,7 +58,7 @@ export default class Channel<WebViewStateType = unknown> {
     });
   }
 
-  bind<T>(method: string, listener: BindListener): void {
+  bind<T>(method: string, listener: BindListener<ChannelEventMessage<T>>): void {
     if (this.vscode) {
       window.addEventListener('message', async event => {
         const message: ChannelEventMessage<T> = event.data;

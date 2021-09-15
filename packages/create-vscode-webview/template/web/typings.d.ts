@@ -11,18 +11,5 @@ declare module '*.svg' {
 
 interface Window {
   channel: any;
-  vscodeEnv: {
-    appName: string;
-    appRoot: string;
-    uriScheme: string;
-    language: string;
-    clipboard: Clipboard;
-    machineId: string;
-    sessionId: string;
-    isNewAppInstall: boolean;
-    isTelemetryEnabled: boolean;
-    remoteName: string | undefined;
-    shell: string;
-    uiKind: 1 | 2;
-  }
+  vsCode: any
 }

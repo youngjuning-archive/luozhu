@@ -63,13 +63,15 @@ export default class Channel<WebViewStateType = unknown> {
     });
   }
 
-  bind(listener: BindListener, vscodeApi?: typeof vscode) {
+  bind(method: string, listener: BindListener, vscodeApi?: typeof vscode) {
     if (this.vscode) {
       window.addEventListener('message', async event => {
         const message: EventMessage = event.data;
-        const data = await listener(message);
-        if (data) {
-          this.vscode.postMessage({ ...message, payload: data });
+        if (method === message.method) {
+          const data = await listener(message);
+          if (data) {
+            this.vscode.postMessage({ ...message, payload: data });
+          }
         }
       });
     } else {
@@ -83,9 +85,11 @@ export default class Channel<WebViewStateType = unknown> {
             await listener(message);
             return;
           }
-          const data = await listener(message);
-          if (data) {
-            this.webview.postMessage({ ...message, payload: data });
+          if (method === message.method) {
+            const data = await listener(message);
+            if (data) {
+              this.webview.postMessage({ ...message, payload: data });
+            }
           }
         },
         undefined,

@@ -6,13 +6,13 @@
 $ yarn install @luozhu/vscode-channel
 ```
 
-## 使用指南
-
-### 导入库
+## 导入
 
 ```ts
 import Channel from '@luozhu/vscode-channel';
 ```
+
+## 初始化
 
 ### vscode 中初始化实例
 
@@ -28,64 +28,57 @@ const channel = new Channel(context, currentPanel);
 const channel = new Channel();
 ```
 
-### 发送指令
+### 插件通知 webview
+
+#### 插件发送指令
 
 ```ts
-channel.call({ method: 'showAuthor' });
+channel.call('sayHi', {
+  name: '洛竹',
+});
 ```
 
-### 接收指令
+#### webview 接收指令
 
 ```ts
 import { Modal } from 'antd';
 ...
-channel.bind(async message => {
-  switch (message.method) {
-    case 'showAuthor': {
-      Modal.info({
-        title: '洛竹',
-        content: (
-          <div>
-            大家好，我是洛竹🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
-            <a href="https://juejin.cn/user/325111174662855/posts">点赞</a>帮我聚集灵力⭐️。
-          </div>
-        ),
-        okText: <a href="https://juejin.cn/user/325111174662855/posts">点赞 o(￣▽￣)ｄ</a>,
-      });
-      break;
-    }
-    default:
-      break;
-  }
+channel.bind("sayHi", message => {
+  Modal.info({
+    title: message.params.name,
+    content: (
+      <div>
+        大家好，我是{message.params.name}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
+        <a href="https://juejin.cn/user/325111174662855/posts">点赞</a>帮我聚集灵力⭐️。
+      </div>
+    ),
+    okText: <a href="https://juejin.cn/user/325111174662855/posts">点赞 o(￣▽￣)ｄ</a>,
+  });
 });
 ```
 
-`Channel.bind` 方法支持根据回调函数是否返回 void 来决定事件是全双工还是单工。比如需要在 webview 中调用接口或者获取 vscode 配置信息，那么就需要在 `Channel.bind` 的回调函数中返回数据，Channel 会通过发送事件触发 `Channel.call` 中注册的监听器来实现全双工。
+### webview 通知插件
 
-## webview 获取 vscode 变量
-
-由于 JSON 序列化的原因，我们只能获取变量，没办法获取函数。
-
-**webview 侧**：
+### webview 发送指令
 
 ```ts
-const getEnv = async () => {
-  const { payload } = (await channel.call({
-    eventType: 'variable',
-    params: {
-      variablePath: 'env', // 'env.appRoot' | 'env.appName'
-    },
-  })) as any;
-  console.log('getEnv', payload);
+async () => {
+  const { payload: userInfo } = await channel.call('getUserInfo', { userId: '6da59wed6' });
+  console.log('用户信息', userInfo);
 };
 ```
 
-**vscode 侧**：
-
-内部使用 lodash.get 处理了获取和回返值，所以这里回调里可以不用返回任何值。
+### 插件接收指令
 
 ```ts
-channel.bind(message => {
-  // do something
-}, vscode);
+channel.bind('getUserInfo', () => {
+  const result = await axios.get('https://localhost:8080/getUserInfo');
+  return result.data;
+});
 ```
+
+## 工作模式
+
+`@luozhu/vscode-channel` 支持全双工和单工通信。切换模式是自动的，`Channel.bind` 方法会根据回调函数是否返回 `void` 来决定事件是全双工还是单工。
+
+如果你在一侧发送指令后期待另一侧返回数据，那么就是全双工模式；如果你只是想在一侧发送指令让另一侧执行，那使用单工模式就可以。

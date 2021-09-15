@@ -1,20 +1,10 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import vscode from 'vscode';
 import { nanoid } from 'nanoid';
-import _get from 'lodash.get';
 import { WebviewApi } from 'vscode-webview';
 
-export type EventType = 'request' | 'command' | 'variable';
-
-export interface EventMessage {
-  eventType?: EventType;
+export interface ChannelEventMessage {
   eventId: string;
-  method?: string;
-  params?;
-}
-
-interface CallParams {
-  eventType?: EventType;
   method?: string;
   params?;
 }
@@ -36,21 +26,21 @@ export default class Channel<WebViewStateType = unknown> {
     }
   }
 
-  call({ eventType, method, params }: CallParams) {
+  call(method: string, params) {
     return new Promise(resolve => {
       const eventId = nanoid();
 
       if (this.vscode) {
-        this.vscode.postMessage({ eventType, eventId, method, params });
+        this.vscode.postMessage({ eventId, method, params });
         window.addEventListener('message', event => {
-          const message = event.data;
+          const message: ChannelEventMessage = event.data;
           if (message.eventId === eventId) {
             resolve(message);
           }
         });
       } else {
-        this.webview.postMessage({ eventType, eventId, method, params });
-        this.webview.onDidReceiveMessage(
+        this.webview.postMessage({ eventId, method, params });
+        const disposable = this.webview.onDidReceiveMessage(
           message => {
             if (message.eventId === eventId) {
               resolve(message);
@@ -59,14 +49,15 @@ export default class Channel<WebViewStateType = unknown> {
           undefined,
           this.context.subscriptions
         );
+        disposable.dispose();
       }
     });
   }
 
-  bind(method: string, listener: BindListener, vscodeApi?: typeof vscode) {
+  bind(method: string, listener: BindListener) {
     if (this.vscode) {
       window.addEventListener('message', async event => {
-        const message: EventMessage = event.data;
+        const message: ChannelEventMessage = event.data;
         if (method === message.method) {
           const data = await listener(message);
           if (data) {
@@ -76,15 +67,7 @@ export default class Channel<WebViewStateType = unknown> {
       });
     } else {
       this.webview.onDidReceiveMessage(
-        async (message: EventMessage) => {
-          if (message.eventType === 'variable') {
-            this.webview.postMessage({
-              ...message,
-              payload: _get(vscodeApi, message.params.variablePath),
-            });
-            await listener(message);
-            return;
-          }
+        async (message: ChannelEventMessage) => {
           if (method === message.method) {
             const data = await listener(message);
             if (data) {

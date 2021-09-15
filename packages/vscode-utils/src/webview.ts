@@ -40,13 +40,6 @@ export const getUmiHTMLContent = (
         <title>${title}</title>
         <link rel="stylesheet" href="${getDiskPath('umi.css')}" />
         <style>
-          html, body, #root {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-          }
           // 给 webview 内容加上主题
           body.vscode-light {
             color: black;

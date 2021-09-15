@@ -32,24 +32,28 @@ export default class Channel<WebViewStateType = unknown> {
 
       if (this.vscode) {
         this.vscode.postMessage({ eventId, method, params });
-        window.addEventListener('message', event => {
+
+        const listener = event => {
           const message: ChannelEventMessage = event.data;
           if (message.eventId === eventId) {
             resolve(message);
+            window.removeEventListener('message', listener);
           }
-        });
+        };
+
+        window.addEventListener('message', listener);
       } else {
         this.webview.postMessage({ eventId, method, params });
         const disposable = this.webview.onDidReceiveMessage(
           message => {
             if (message.eventId === eventId) {
               resolve(message);
+              disposable.dispose();
             }
           },
           undefined,
           this.context.subscriptions
         );
-        disposable.dispose();
       }
     });
   }

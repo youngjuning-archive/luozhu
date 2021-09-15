@@ -26,7 +26,7 @@ export default class Channel<WebViewStateType = unknown> {
     }
   }
 
-  call<T>(method: string, params: T): Promise<void | ChannelEventMessage<T>> {
+  call<T = any>(method: string, params: T): Promise<void | ChannelEventMessage<T>> {
     return new Promise(resolve => {
       const eventId = nanoid();
 
@@ -58,7 +58,7 @@ export default class Channel<WebViewStateType = unknown> {
     });
   }
 
-  bind<T>(method: string, listener: BindListener<ChannelEventMessage<T>>): void {
+  bind<T = any>(method: string, listener: BindListener<ChannelEventMessage<T>>): void {
     if (this.vscode) {
       window.addEventListener('message', async event => {
         const message: ChannelEventMessage<T> = event.data;

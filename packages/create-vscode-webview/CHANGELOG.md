@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.3](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.7.2...@luozhu/create-vscode-webview@0.7.3) (2021-09-16)
+
+
+### Reverts
+
+* Revert "fix: remove window.vscodeEnv for using-proposed-api" ([ab87453](https://github.com/youngjuning/luozhu/commit/ab87453f60fca2a028c4014bb6a49554e6a19cdc))
+
+
+
+
+
 ## [0.7.2](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-webview@0.7.1...@luozhu/create-vscode-webview@0.7.2) (2021-09-16)
 
 

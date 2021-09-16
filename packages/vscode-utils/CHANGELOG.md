@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.4](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.8.3...@luozhu/vscode-utils@0.8.4) (2021-09-16)
+
+
+### Reverts
+
+* Revert "fix: remove window.vscodeEnv for using-proposed-api" ([ab87453](https://github.com/youngjuning/luozhu/commit/ab87453f60fca2a028c4014bb6a49554e6a19cdc))
+
+
+
+
+
 ## [0.8.3](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.8.2...@luozhu/vscode-utils@0.8.3) (2021-09-16)
 
 

@@ -3,16 +3,12 @@ import vscode from 'vscode';
 import { nanoid } from 'nanoid';
 import { WebviewApi } from 'vscode-webview';
 
-export interface ChannelEventMessage<Params> {
+export interface ChannelEventMessage<Params, ReturnPayload = void> {
   eventId: string;
-  method?: string;
-  params?: Params;
+  method: string;
+  params: Params;
+  payload: ReturnPayload;
 }
-
-type BindListener<Message> =
-  | ((message: Message) => Record<string, unknown>)
-  | ((message: Message) => Promise<Record<string, unknown>>)
-  | ((message: Message) => void);
 
 export default class Channel<WebViewStateType = unknown> {
   vscode: WebviewApi<WebViewStateType>;
@@ -26,7 +22,10 @@ export default class Channel<WebViewStateType = unknown> {
     }
   }
 
-  call<T = any>(method: string, params: T): Promise<void | ChannelEventMessage<T>> {
+  call<TParams = unknown, ReturnPayload = void>(
+    method: string,
+    params: TParams
+  ): Promise<ChannelEventMessage<TParams, ReturnPayload>> {
     return new Promise(resolve => {
       const eventId = nanoid();
 
@@ -34,7 +33,7 @@ export default class Channel<WebViewStateType = unknown> {
         this.vscode.postMessage({ eventId, method, params });
 
         const listener = event => {
-          const message: ChannelEventMessage<T> = event.data;
+          const message: ChannelEventMessage<TParams, ReturnPayload> = event.data;
           if (message.eventId === eventId) {
             resolve(message);
             window.removeEventListener('message', listener);
@@ -58,10 +57,13 @@ export default class Channel<WebViewStateType = unknown> {
     });
   }
 
-  bind<T = any>(method: string, listener: BindListener<ChannelEventMessage<T>>): void {
+  bind<TParams = unknown, ReturnPayload = void>(
+    method: string,
+    listener: (message: ChannelEventMessage<TParams>) => ReturnPayload | Promise<ReturnPayload>
+  ): void {
     if (this.vscode) {
       window.addEventListener('message', async event => {
-        const message: ChannelEventMessage<T> = event.data;
+        const message: ChannelEventMessage<TParams> = event.data;
         if (method === message.method) {
           const data = await listener(message);
           if (data) {
@@ -71,7 +73,7 @@ export default class Channel<WebViewStateType = unknown> {
       });
     } else {
       this.webview.onDidReceiveMessage(
-        async (message: ChannelEventMessage<T>) => {
+        async (message: ChannelEventMessage<TParams>) => {
           if (method === message.method) {
             const data = await listener(message);
             if (data) {

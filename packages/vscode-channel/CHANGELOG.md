@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.6.2...@luozhu/vscode-channel@0.7.0) (2021-09-22)
+
+
+### Features
+
+* refine types for vscode channel payload ([#2](https://github.com/youngjuning/luozhu/issues/2)) ([0e35152](https://github.com/youngjuning/luozhu/commit/0e3515207d6f05af6a22c19e01ff1b2f5697397f))
+
+
+
+
+
 ## [0.6.2](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.6.1...@luozhu/vscode-channel@0.6.2) (2021-09-15)
 
 **Note:** Version bump only for package @luozhu/vscode-channel

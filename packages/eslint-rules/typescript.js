@@ -15,7 +15,8 @@ module.exports = {
   '@typescript-eslint/no-non-null-assertion': 0,
   '@typescript-eslint/ban-ts-ignore': 0,
   '@typescript-eslint/no-var-requires': 0,
-  '@typescript-eslint/no-empty-function': 0,
+  'no-empty-function': 0,
+  '@typescript-eslint/no-empty-function': [1, { allow: ['arrowFunctions'] }],
   '@typescript-eslint/explicit-function-return-type': [
     0,
     {

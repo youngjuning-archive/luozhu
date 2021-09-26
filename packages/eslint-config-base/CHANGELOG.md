@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.4](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-base@1.8.3...@luozhu/eslint-config-base@1.8.4) (2021-09-26)
+
+**Note:** Version bump only for package @luozhu/eslint-config-base
+
+
+
+
+
 ## [1.8.3](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-base@1.8.2...@luozhu/eslint-config-base@1.8.3) (2021-09-14)
 
 **Note:** Version bump only for package @luozhu/eslint-config-base

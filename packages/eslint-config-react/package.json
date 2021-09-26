@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/eslint-config-react",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "description": "Luozhu's react eslint config",
   "keywords": [
     "luozhu",
@@ -32,7 +32,7 @@
     "url": "https://github.com/youngjuning/luozhu/issues"
   },
   "dependencies": {
-    "@luozhu/eslint-rules": "^1.4.2",
+    "@luozhu/eslint-rules": "^1.4.3",
     "@rushstack/eslint-patch": "^1.0.6",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",

@@ -22,7 +22,7 @@ export default class Channel<WebViewStateType = unknown> {
       this.context = context;
     } else {
       throw new Error(
-        'You are in vscode (Node.js) environment, so  you must provide a webviewPanel to be bound to current vscode context!'
+        'You are in vscode (Node.js) environment, so you must provide a webviewPanel to be bound to current vscode context!'
       );
     }
   }
@@ -58,6 +58,8 @@ export default class Channel<WebViewStateType = unknown> {
           undefined,
           this.context.subscriptions
         );
+      } else {
+        throw new Error('Channel not initialized correctly, call failed!');
       }
     });
   }
@@ -89,6 +91,8 @@ export default class Channel<WebViewStateType = unknown> {
         undefined,
         this.context.subscriptions
       );
+    } else {
+      throw new Error('Channel not initialized correctly, bind failed!');
     }
   }
 }

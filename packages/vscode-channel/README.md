@@ -43,7 +43,7 @@ channel.call('sayHi', {
 ```ts
 import { Modal } from 'antd';
 ...
-channel.bind("sayHi", (request) => {
+channel.bind("sayHi", request => {
   Modal.info({
     title: request.name,
     content: (

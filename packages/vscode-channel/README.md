@@ -79,7 +79,7 @@ channel.bind('getUserInfo', () => {
 
 ## 策略模式
 
-方法多的时候，也可以使用策略模式避免减少代码重复。
+方法多的时候，也可以使用策略模式减少代码重复。
 
 ```ts
 for (method of Object.keys(stratiges)) {

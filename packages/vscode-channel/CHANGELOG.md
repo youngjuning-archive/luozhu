@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.7.0...@luozhu/vscode-channel@0.8.0) (2021-10-11)
+
+
+### Features
+
+* hide implementation detail & fix strict type & allow empty request ([#3](https://github.com/youngjuning/luozhu/issues/3)) ([42fcb46](https://github.com/youngjuning/luozhu/commit/42fcb462bf2cd3ccb0d08588d162e596b4808074))
+
+
+
+
+
 # [0.7.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.6.2...@luozhu/vscode-channel@0.7.0) (2021-09-22)
 
 

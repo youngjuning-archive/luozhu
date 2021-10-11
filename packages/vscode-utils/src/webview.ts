@@ -17,9 +17,9 @@ export const getUmiHTMLContent = (
     style?: string;
   }
 ): string => {
-  const title = options.title || 'umijs';
-  const rootPath = options.rootPath || 'web';
-  const style = options.style || '';
+  const title = options!.title || 'umijs';
+  const rootPath = options!.rootPath || 'web';
+  const style = options!.style || '';
   // 获取内容的 Uri
   const getDiskPath = (fileName: string) => {
     return webviewPanel.webview.asWebviewUri(

@@ -45,7 +45,7 @@ import { Modal } from 'antd';
 ...
 channel.bind("sayHi", (request) => {
   Modal.info({
-    title: request,
+    title: request.name,
     content: (
       <div>
         大家好，我是{request.name}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过

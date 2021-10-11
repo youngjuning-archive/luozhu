@@ -3,87 +3,96 @@ import vscode from 'vscode';
 import { nanoid } from 'nanoid';
 import { WebviewApi } from 'vscode-webview';
 
-export interface ChannelEventMessage<Params, ReturnPayload = void> {
+export interface ChannelEventMessage<TRequest, TResponse = void> {
   eventId: string;
   method: string;
-  params: Params;
-  payload: ReturnPayload;
+  request: TRequest;
+  response: TResponse;
 }
 
 export default class Channel<WebViewStateType = unknown> {
-  vscode: WebviewApi<WebViewStateType>;
-  webview: vscode.Webview;
-  context: vscode.ExtensionContext;
+  private readonly vscode?: WebviewApi<WebViewStateType>;
+  private readonly webview?: vscode.Webview;
+  private readonly context?: vscode.ExtensionContext;
   constructor(context?: vscode.ExtensionContext, webviewPanel?: vscode.WebviewPanel) {
-    this.vscode = typeof acquireVsCodeApi === 'function' ? acquireVsCodeApi() : null;
-    if (!this.vscode) {
+    if (typeof acquireVsCodeApi === 'function') {
+      this.vscode = acquireVsCodeApi();
+    } else if (context && webviewPanel) {
       this.webview = webviewPanel.webview;
       this.context = context;
+    } else {
+      throw new Error(
+        'You are in vscode (Node.js) environment, so you must provide a webviewPanel to be bound to current vscode context!'
+      );
     }
   }
 
-  call<TParams = unknown, ReturnPayload = void>(
+  call<TRequest = unknown, TResponse = void>(
     method: string,
-    params: TParams
-  ): Promise<ChannelEventMessage<TParams, ReturnPayload>> {
-    return new Promise(resolve => {
+    request?: TRequest
+  ): Promise<TResponse> {
+    return new Promise((resolve, reject) => {
       const eventId = nanoid();
 
       if (this.vscode) {
-        this.vscode.postMessage({ eventId, method, params });
+        this.vscode.postMessage({ eventId, method, request });
 
         const listener = event => {
-          const message: ChannelEventMessage<TParams, ReturnPayload> = event.data;
+          const message: ChannelEventMessage<TRequest, TResponse> = event.data;
           if (message.eventId === eventId) {
-            resolve(message);
+            resolve(message.response);
             window.removeEventListener('message', listener);
           }
         };
 
         window.addEventListener('message', listener);
-      } else {
-        this.webview.postMessage({ eventId, method, params });
+      } else if (this.context && this.webview) {
+        this.webview.postMessage({ eventId, method, request });
         const disposable = this.webview.onDidReceiveMessage(
           message => {
             if (message.eventId === eventId) {
-              resolve(message);
+              resolve(message.response);
               disposable.dispose();
             }
           },
           undefined,
           this.context.subscriptions
         );
+      } else {
+        reject(new Error('Channel not initialized correctly, call failed!'));
       }
     });
   }
 
-  bind<TParams = unknown, ReturnPayload = void>(
+  bind<TRequest = unknown, TResponse = void>(
     method: string,
-    listener: (message: ChannelEventMessage<TParams>) => ReturnPayload | Promise<ReturnPayload>
+    listener: (request: TRequest) => TResponse | Promise<TResponse>
   ): void {
     if (this.vscode) {
       window.addEventListener('message', async event => {
-        const message: ChannelEventMessage<TParams> = event.data;
+        const message: ChannelEventMessage<TRequest, TResponse> = event.data;
         if (method === message.method) {
-          const data = await listener(message);
+          const data = await listener(message.request);
           if (data) {
-            this.vscode.postMessage({ ...message, payload: data });
+            this.vscode!.postMessage({ ...message, response: data });
           }
         }
       });
-    } else {
+    } else if (this.context && this.webview) {
       this.webview.onDidReceiveMessage(
-        async (message: ChannelEventMessage<TParams>) => {
+        async (message: ChannelEventMessage<TRequest, TResponse>) => {
           if (method === message.method) {
-            const data = await listener(message);
+            const data = await listener(message.request);
             if (data) {
-              this.webview.postMessage({ ...message, payload: data });
+              this.webview!.postMessage({ ...message, response: data });
             }
           }
         },
         undefined,
         this.context.subscriptions
       );
+    } else {
+      throw new Error('Channel not initialized correctly, bind failed!');
     }
   }
 }

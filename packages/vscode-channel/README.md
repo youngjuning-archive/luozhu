@@ -43,12 +43,12 @@ channel.call('sayHi', {
 ```ts
 import { Modal } from 'antd';
 ...
-channel.bind("sayHi", message => {
+channel.bind("sayHi", request => {
   Modal.info({
-    title: message.params.name,
+    title: request.name,
     content: (
       <div>
-        大家好，我是{message.params.name}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
+        大家好，我是{request.name}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
         <a href="https://juejin.cn/user/325111174662855/posts">点赞</a>帮我聚集灵力⭐️。
       </div>
     ),
@@ -63,7 +63,7 @@ channel.bind("sayHi", message => {
 
 ```ts
 async () => {
-  const { payload: userInfo } = await channel.call('getUserInfo', { userId: '6da59wed6' });
+  const userInfo = await channel.call('getUserInfo', { userId: '6da59wed6' });
   console.log('用户信息', userInfo);
 };
 ```
@@ -75,6 +75,21 @@ channel.bind('getUserInfo', () => {
   const result = await axios.get('https://localhost:8080/getUserInfo');
   return result.data;
 });
+```
+
+## 策略模式
+
+方法多的时候，也可以使用策略模式减少代码重复。
+
+```ts
+for (method of Object.keys(stratiges)) {
+  channel.bind(
+    method,
+    (request) => {
+      return stratiges[method](...request)
+    }
+  )
+}
 ```
 
 ## 工作模式

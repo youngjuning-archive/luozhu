@@ -20,8 +20,7 @@
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "tsc",
-    "dev": "yarn build -w",
-    "prepublishOnly": "yarn build"
+    "dev": "yarn build -w"
   },
   "repository": {
     "type": "git",

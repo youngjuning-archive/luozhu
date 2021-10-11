@@ -33,8 +33,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "dev": "yarn build -w",
-    "prepublishOnly": "yarn build"
+    "dev": "yarn build -w"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.12",

@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-vscode-extension",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Luozhu's vscode extension template.",
   "keywords": [
     "vscode",
@@ -40,8 +40,8 @@
   },
   "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-vscode-extension#readme",
   "dependencies": {
-    "@luozhu/node": "^0.0.2",
-    "@luozhu/template-generator": "^0.4.2",
+    "@luozhu/node": "^0.0.3",
+    "@luozhu/template-generator": "^0.4.3",
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
     "execa": "^5.1.1",

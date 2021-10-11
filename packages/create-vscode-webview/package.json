@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/create-vscode-webview",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "Create vscode extension with webview",
   "keywords": [
     "vscode",
@@ -41,8 +41,8 @@
   },
   "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-vscode-webview#readme",
   "dependencies": {
-    "@luozhu/node": "^0.0.2",
-    "@luozhu/template-generator": "^0.4.2",
+    "@luozhu/node": "^0.0.3",
+    "@luozhu/template-generator": "^0.4.3",
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
     "execa": "^5.1.1",

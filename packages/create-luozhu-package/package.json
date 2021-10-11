@@ -1,6 +1,6 @@
 {
   "name": "create-luozhu-package",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Create luozhu package",
   "keywords": [
     "yarn-create",
@@ -38,8 +38,8 @@
   },
   "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/create-luozhu-package#readme",
   "dependencies": {
-    "@luozhu/node": "^0.0.2",
-    "@luozhu/template-generator": "^0.4.2",
+    "@luozhu/node": "^0.0.3",
+    "@luozhu/template-generator": "^0.4.3",
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
     "execa": "^5.1.1",

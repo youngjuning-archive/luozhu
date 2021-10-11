@@ -23,7 +23,9 @@
   },
   "scripts": {
     "commit": "git cz",
-    "prepublish-it": "rimraf packages/*/lib && lerna run build",
+    "prebuild": "rimraf packages/*/lib",
+    "build": "lerna run build",
+    "prepublish-it": "yarn build",
     "publish-it": "lerna publish",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },

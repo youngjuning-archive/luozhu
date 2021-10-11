@@ -28,9 +28,9 @@ const channel = new Channel(context, currentPanel);
 const channel = new Channel();
 ```
 
-### 插件通知 webview
+## 插件通知 webview
 
-#### 插件发送指令
+### 插件发送指令
 
 ```ts
 channel.call('sayHi', {
@@ -38,7 +38,7 @@ channel.call('sayHi', {
 });
 ```
 
-#### webview 接收指令
+### webview 接收指令
 
 ```ts
 import { Modal } from 'antd';
@@ -57,7 +57,7 @@ channel.bind("sayHi", message => {
 });
 ```
 
-### webview 通知插件
+## webview 通知插件
 
 ### webview 发送指令
 

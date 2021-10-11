@@ -31,7 +31,7 @@ export default class Channel<WebViewStateType = unknown> {
     method: string,
     request?: TRequest
   ): Promise<TResponse> {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       const eventId = nanoid();
 
       if (this.vscode) {
@@ -59,7 +59,7 @@ export default class Channel<WebViewStateType = unknown> {
           this.context.subscriptions
         );
       } else {
-        throw new Error('Channel not initialized correctly, call failed!');
+        reject(new Error('Channel not initialized correctly, call failed!'));
       }
     });
   }

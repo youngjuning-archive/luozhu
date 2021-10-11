@@ -43,12 +43,12 @@ channel.call('sayHi', {
 ```ts
 import { Modal } from 'antd';
 ...
-channel.bind("sayHi", message => {
+channel.bind("sayHi", (request) => {
   Modal.info({
-    title: message.params.name,
+    title: request,
     content: (
       <div>
-        大家好，我是{message.params.name}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
+        大家好，我是{request}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
         <a href="https://juejin.cn/user/325111174662855/posts">点赞</a>帮我聚集灵力⭐️。
       </div>
     ),
@@ -63,7 +63,7 @@ channel.bind("sayHi", message => {
 
 ```ts
 async () => {
-  const { payload: userInfo } = await channel.call('getUserInfo', { userId: '6da59wed6' });
+  const userInfo = await channel.call('getUserInfo', { userId: '6da59wed6' });
   console.log('用户信息', userInfo);
 };
 ```

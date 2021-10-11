@@ -48,7 +48,7 @@ channel.bind("sayHi", (request) => {
     title: request,
     content: (
       <div>
-        大家好，我是{request}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
+        大家好，我是{request.name}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
         <a href="https://juejin.cn/user/325111174662855/posts">点赞</a>帮我聚集灵力⭐️。
       </div>
     ),
@@ -75,6 +75,21 @@ channel.bind('getUserInfo', () => {
   const result = await axios.get('https://localhost:8080/getUserInfo');
   return result.data;
 });
+```
+
+## 策略模式
+
+方法多的时候，也可以使用策略模式避免减少代码重复。
+
+```ts
+for (method of Object.keys(stratiges)) {
+  channel.bind(
+    method,
+    (request) => {
+      return stratiges[method](...request)
+    }
+  )
+}
 ```
 
 ## 工作模式

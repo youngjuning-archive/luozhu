@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-typescript@1.8.5...@luozhu/eslint-config-typescript@1.9.0) (2021-10-14)
+
+
+### Features
+
+* support eslint v8 ([44f3769](https://github.com/youngjuning/luozhu/commit/44f3769d7a790c2979be1cbdd23c218a63619007))
+
+
+
+
+
 ## [1.8.5](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-typescript@1.8.4...@luozhu/eslint-config-typescript@1.8.5) (2021-09-26)
 
 **Note:** Version bump only for package @luozhu/eslint-config-typescript

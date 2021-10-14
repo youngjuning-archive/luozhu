@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/eslint-config-typescript",
-  "version": "1.8.5",
+  "version": "1.9.0",
   "description": "Luozhu's typescript eslint config",
   "keywords": [
     "luozhu",

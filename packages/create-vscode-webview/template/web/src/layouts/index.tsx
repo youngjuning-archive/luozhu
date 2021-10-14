@@ -2,7 +2,7 @@ import { setLocale } from 'umi';
 
 require('./index.less');
 
-setLocale(window.vscodeEnv.language === 'zh-cn' ? 'zh-CN' : window.vscodeEnv.language, false);
+setLocale('zh-CN', false);
 
 export default props => {
   return <>{props.children}</>;

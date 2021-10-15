@@ -1,7 +1,7 @@
 {
   "name": "@luozhu/vscode-utils",
   "version": "0.8.6",
-  "description": "Luozhu's vscode utils",
+  "description": "Luozhu's vscode utils.",
   "keywords": [
     "luozhu"
   ],

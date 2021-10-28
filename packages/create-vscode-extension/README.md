@@ -46,3 +46,7 @@ $ create-vscode-extension
 - [VS Code API 中文文档](https://vscode-api-cn.js.org/)
 - [VS Code 官网文档](https://code.visualstudio.com/docs)
 - [vscode 插件发布](http://tny.im/bShcp)
+
+## TODOS
+
+- [ ] 基于原始模板做渐进式修改

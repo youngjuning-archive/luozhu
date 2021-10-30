@@ -73,9 +73,7 @@ export default class Channel<WebViewStateType = unknown> {
         const message: ChannelEventMessage<TRequest, TResponse> = event.data;
         if (method === message.method) {
           const data = await listener(message.request);
-          if (data) {
-            this.vscode!.postMessage({ ...message, response: data });
-          }
+          this.vscode!.postMessage({ ...message, response: data });
         }
       });
     } else if (this.context && this.webview) {
@@ -83,9 +81,7 @@ export default class Channel<WebViewStateType = unknown> {
         async (message: ChannelEventMessage<TRequest, TResponse>) => {
           if (method === message.method) {
             const data = await listener(message.request);
-            if (data) {
-              this.webview!.postMessage({ ...message, response: data });
-            }
+            this.webview!.postMessage({ ...message, response: data });
           }
         },
         undefined,

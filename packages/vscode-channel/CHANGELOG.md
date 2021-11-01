@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.8.0...@luozhu/vscode-channel@0.8.1) (2021-11-01)
+
+
+### Bug Fixes
+
+* call wont resolve when no return value in bind side ([#4](https://github.com/youngjuning/luozhu/issues/4)) ([f4c22da](https://github.com/youngjuning/luozhu/commit/f4c22da0710636df983866475272bf4aa54c9341))
+
+
+
+
+
 # [0.8.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.7.0...@luozhu/vscode-channel@0.8.0) (2021-10-11)
 
 

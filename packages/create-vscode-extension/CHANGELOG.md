@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-extension@0.4.1...@luozhu/create-vscode-extension@0.4.2) (2021-11-01)
+
+**Note:** Version bump only for package @luozhu/create-vscode-extension
+
+
+
+
+
 ## [0.4.1](https://github.com/youngjuning/luozhu/compare/@luozhu/create-vscode-extension@0.4.0...@luozhu/create-vscode-extension@0.4.1) (2021-10-11)
 
 **Note:** Version bump only for package @luozhu/create-vscode-extension

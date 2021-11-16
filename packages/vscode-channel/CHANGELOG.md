@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.8.1...@luozhu/vscode-channel@0.8.2) (2021-11-16)
+
+
+### Bug Fixes
+
+* **vscode-channel:** add errorMessage to ChannelEventMessage ([26d913a](https://github.com/youngjuning/luozhu/commit/26d913a012fc4e697d6a148b7e81e67d6167dfcb))
+
+
+
+
+
 ## [0.8.1](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.8.0...@luozhu/vscode-channel@0.8.1) (2021-11-01)
 
 

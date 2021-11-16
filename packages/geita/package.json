@@ -1,0 +1,39 @@
+{
+  "name": "@luozhu/geita",
+  "version": "0.0.0",
+  "description": "Simplifying complex git operations",
+  "keywords": [
+    "luozhu"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "bin": {
+    "geita": "lib/index.js"
+  },
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "dev": "yarn build -w"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngjuning/luozhu.git",
+    "directory": "packages/geita"
+  },
+  "author": {
+    "name": "洛竹",
+    "email": "youngjuning@163.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngjuning/luozhu/issues"
+  },
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/geita#readme"
+}

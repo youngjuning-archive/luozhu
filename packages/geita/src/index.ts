@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import { program } from 'commander';
-import path from 'path';
 import execa from 'execa';
 
 (() => {
@@ -13,10 +12,7 @@ import execa from 'execa';
     .action(file => {
       try {
         execa.commandSync(
-          `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --prune-empty --index-filter 'git rm --cached --ignore-unmatch -fr ${path.join(
-            process.cwd(),
-            file
-          )}' – --all`,
+          `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${process.cwd()}/${file}' --prune-empty --tag-name-filter cat -- --all`,
           {
             shell: true,
             stdout: 'inherit',

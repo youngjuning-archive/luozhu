@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.8.2...@luozhu/vscode-channel@0.9.0) (2021-11-16)
+
+
+### Features
+
+* **vscode-channel:** handle exception inner ([7d7aabd](https://github.com/youngjuning/luozhu/commit/7d7aabd9cfe6a1205e87222ff22caa8868ef4d51))
+
+
+
+
+
 ## [0.8.2](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-channel@0.8.1...@luozhu/vscode-channel@0.8.2) (2021-11-16)
 
 

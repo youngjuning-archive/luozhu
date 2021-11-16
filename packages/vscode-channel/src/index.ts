@@ -8,6 +8,7 @@ export interface ChannelEventMessage<TRequest, TResponse = void> {
   method: string;
   request: TRequest;
   response: TResponse;
+  errorMessage: string;
 }
 
 export default class Channel<WebViewStateType = unknown> {
@@ -41,7 +42,9 @@ export default class Channel<WebViewStateType = unknown> {
           const message: ChannelEventMessage<TRequest, TResponse> = event.data;
           if (message.eventId === eventId) {
             window.removeEventListener('message', listener);
-            message.errorMessage ? reject(new Error(message.errorMessage)) : resolve(message.response);
+            message.errorMessage
+              ? reject(new Error(message.errorMessage))
+              : resolve(message.response);
           }
         };
 
@@ -51,8 +54,10 @@ export default class Channel<WebViewStateType = unknown> {
         const disposable = this.webview.onDidReceiveMessage(
           message => {
             if (message.eventId === eventId) {
-              resolve(message.response);
               disposable.dispose();
+              message.errorMessage
+                ? reject(new Error(message.errorMessage))
+                : resolve(message.response);
             }
           },
           undefined,

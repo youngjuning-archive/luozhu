@@ -7,8 +7,8 @@ export interface ChannelEventMessage<TRequest, TResponse = void> {
   eventId: string;
   method: string;
   request: TRequest;
-  response: TResponse;
-  errorMessage: string;
+  response?: TResponse;
+  error?: Error;
 }
 
 export default class Channel<WebViewStateType = unknown> {
@@ -31,7 +31,7 @@ export default class Channel<WebViewStateType = unknown> {
   call<TRequest = unknown, TResponse = void>(
     method: string,
     request?: TRequest
-  ): Promise<TResponse> {
+  ): Promise<TResponse | undefined> {
     return new Promise((resolve, reject) => {
       const eventId = nanoid();
 
@@ -42,9 +42,7 @@ export default class Channel<WebViewStateType = unknown> {
           const message: ChannelEventMessage<TRequest, TResponse> = event.data;
           if (message.eventId === eventId) {
             window.removeEventListener('message', listener);
-            message.errorMessage
-              ? reject(new Error(message.errorMessage))
-              : resolve(message.response);
+            message.error ? reject(message.error) : resolve(message.response);
           }
         };
 
@@ -55,9 +53,7 @@ export default class Channel<WebViewStateType = unknown> {
           message => {
             if (message.eventId === eventId) {
               disposable.dispose();
-              message.errorMessage
-                ? reject(new Error(message.errorMessage))
-                : resolve(message.response);
+              message.error ? reject(message.error) : resolve(message.response);
             }
           },
           undefined,
@@ -77,16 +73,24 @@ export default class Channel<WebViewStateType = unknown> {
       window.addEventListener('message', async event => {
         const message: ChannelEventMessage<TRequest, TResponse> = event.data;
         if (method === message.method) {
-          const data = await listener(message.request);
-          this.vscode!.postMessage({ ...message, response: data });
+          try {
+            const data = await listener(message.request);
+            this.vscode!.postMessage({ ...message, response: data });
+          } catch (error) {
+            this.vscode!.postMessage({ ...message, error });
+          }
         }
       });
     } else if (this.context && this.webview) {
       this.webview.onDidReceiveMessage(
         async (message: ChannelEventMessage<TRequest, TResponse>) => {
           if (method === message.method) {
-            const data = await listener(message.request);
-            this.webview!.postMessage({ ...message, response: data });
+            try {
+              const data = await listener(message.request);
+              this.webview!.postMessage({ ...message, response: data });
+            } catch (error) {
+              this.webview!.postMessage({ ...message, error });
+            }
           }
         },
         undefined,

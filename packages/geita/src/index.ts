@@ -13,10 +13,10 @@ import execa from 'execa';
     .action(file => {
       try {
         execa.commandSync(
-          `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --prune-empty --index-filter ‘git rm --cached --ignore-unmatch -fr ${path.join(
+          `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --prune-empty --index-filter 'git rm --cached --ignore-unmatch -fr ${path.join(
             process.cwd(),
             file
-          )} – --all`,
+          )}' – --all`,
           {
             shell: true,
             stdout: 'inherit',

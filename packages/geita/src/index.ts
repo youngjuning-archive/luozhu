@@ -11,7 +11,7 @@ import execa from 'execa';
     .description('start named service')
     .action(file => {
       execa.commandSync(
-        `git filter-branch -f --prune-empty --index-filter ‘git rm --cached --ignore-unmatch -fr ${file} – --all`,
+        `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --prune-empty --index-filter ‘git rm --cached --ignore-unmatch -fr ${file} – --all`,
         {
           shell: true,
           stdout: 'inherit',

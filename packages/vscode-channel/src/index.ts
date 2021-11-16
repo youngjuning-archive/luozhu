@@ -40,8 +40,8 @@ export default class Channel<WebViewStateType = unknown> {
         const listener = event => {
           const message: ChannelEventMessage<TRequest, TResponse> = event.data;
           if (message.eventId === eventId) {
-            resolve(message.response);
             window.removeEventListener('message', listener);
+            message.errorMessage ? reject(new Error(message.errorMessage)) : resolve(message.response);
           }
         };
 

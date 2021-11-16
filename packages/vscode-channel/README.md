@@ -35,20 +35,25 @@ const channel = new Channel();
 ```ts
 channel.call('sayHi', {
   name: '洛竹',
+}).catch(error => {
+  console.log("如果我有错，请让法律制裁我！")
 });
 ```
 
+
 ### webview 接收指令
+
+> 插件内部会将 bind 的回调函数错误返回，不建议在 bind 端处理错误。
 
 ```ts
 import { Modal } from 'antd';
 ...
-channel.bind("sayHi", request => {
+channel.bind("sayHi", message => {
   Modal.info({
-    title: request.name,
+    title: message.name,
     content: (
       <div>
-        大家好，我是{request.name}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
+        大家好，我是{message.name}🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
         <a href="https://juejin.cn/user/325111174662855/posts">点赞</a>帮我聚集灵力⭐️。
       </div>
     ),
@@ -62,13 +67,19 @@ channel.bind("sayHi", request => {
 ### webview 发送指令
 
 ```ts
-async () => {
-  const userInfo = await channel.call('getUserInfo', { userId: '6da59wed6' });
-  console.log('用户信息', userInfo);
+() => {
+  const userInfo = await channel.call('getUserInfo', { userId: '6da59wed6' }).then(userInfo => {
+    console.log('用户信息', userInfo);
+  }).catch(error => {
+    // 插件内部会将 bind 的回调函数错误返回
+    console.log(error)
+  });
 };
 ```
 
 ### 插件接收指令
+
+> 插件内部会将 bind 的回调函数错误返回，不建议在 bind 端处理错误。
 
 ```ts
 channel.bind('getUserInfo', () => {

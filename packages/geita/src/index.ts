@@ -1,5 +1,4 @@
 import { program } from 'commander';
-import path from 'path';
 import execa from 'execa';
 
 export const init = () => {

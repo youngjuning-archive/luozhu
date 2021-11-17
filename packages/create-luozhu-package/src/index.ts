@@ -117,7 +117,7 @@ const init = (): void => {
 
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${name} has been generated at packages/${locPath}`));
-      } catch (error) {
+      } catch (error: any) {
         spinner.fail(chalk.red(error.message));
         process.exit(0);
       }

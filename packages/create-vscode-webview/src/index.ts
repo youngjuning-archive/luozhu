@@ -81,7 +81,7 @@ const init = (): void => {
         });
         await tmpdir.cleanup();
         spinner.succeed(chalk.greenBright(`The ${answer.name} has been generated at ${rootDir}`));
-      } catch (error) {
+      } catch (error: any) {
         spinner.fail(chalk.red(error.message));
         process.exit(0);
       }

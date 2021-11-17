@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/youngjuning/luozhu/issues"
   },
-  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/geita#readme"
+  "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/geita#readme",
+  "dependencies": {
+    "escape-string-regexp": "^5.0.0"
+  }
 }

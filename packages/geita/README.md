@@ -8,7 +8,7 @@ $ npm install @luozhu/geita -g
 
 ## 命令
 
-### geita prune-file <file>
+### `geita prune-file <file>`
 
 单独清理某个文件的所有历史记录。
 
@@ -25,6 +25,6 @@ git push origin --force --tags
 git gc --prune=now
 ```
 
-### geita prune-msg <msg>
+### `geita prune-msg <msg>`
 
 清理 commit message 中的敏感信息。

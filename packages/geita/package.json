@@ -10,7 +10,7 @@
   ],
   "main": "lib/index.js",
   "bin": {
-    "geita": "lib/index.js"
+    "geita": "bin/cli.js"
   },
   "types": "lib/index.d.ts",
   "scripts": {

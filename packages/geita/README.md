@@ -26,3 +26,5 @@ git gc --prune=now
 ```
 
 ### geita prune-msg <msg>
+
+清理 commit message 中的敏感信息。

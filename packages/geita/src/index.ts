@@ -1,6 +1,6 @@
 import { program } from 'commander';
+import path from 'path';
 import execa from 'execa';
-import escapeStringRegexp from 'escape-string-regexp';
 
 export const init = () => {
   const pkgJson = require('../package.json');
@@ -29,9 +29,7 @@ export const init = () => {
     .action(msg => {
       try {
         execa.command(
-          `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --msg-filter "perl -CIOED -p -e 's/${escapeStringRegexp(
-            msg
-          )}/ /g'" -- --all`,
+          `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --msg-filter "perl -CIOED -p -e 's/${msg}/ /g'" -- --all`,
           {
             shell: true,
             stdout: 'inherit',

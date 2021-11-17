@@ -6,7 +6,7 @@
 $ npm install @luozhu/geita -g
 ```
 
-## 命令
+## Commands
 
 ### `geita prune-file <file>`
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/youngjuning/luozhu/compare/@luozhu/geita@0.1.0...@luozhu/geita@0.1.1) (2021-12-17)
+
+
+### Bug Fixes
+
+* add dependencies ([53382f0](https://github.com/youngjuning/luozhu/commit/53382f060a6dcfaec5eb0f7fca340161ec4c14dd))
+
+
+
+
+
 # 0.1.0 (2021-11-17)
 
 

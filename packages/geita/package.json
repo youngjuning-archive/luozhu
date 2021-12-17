@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/youngjuning/luozhu/tree/main/packages/geita#readme",
   "dependencies": {
-    "escape-string-regexp": "^5.0.0"
+    "commander": "^8.3.0",
+    "execa": "^5.1.1"
   }
 }

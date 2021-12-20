@@ -40,7 +40,7 @@ export const init = () => {
     });
   program
     .command('prune-msg <msg>')
-    .description('清理 commit message 中的敏感信息。（注意特殊字符要转义）')
+    .description('清理 commit message 中的敏感信息（注意特殊字符要转义）。')
     .action(msg => {
       try {
         execa.commandSync(

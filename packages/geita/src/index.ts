@@ -69,7 +69,7 @@ export const init = () => {
     .action(msg => {
       try {
         execa.commandSync(
-          `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --msg-filter "perl -CIOED -p -e 's/${msg}/ /g'" -- --all`,
+          `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --msg-filter "perl -CIOED -p -e 's/${msg}/ /g'" --tag-name-filter cat -- --all`,
           {
             shell: true,
             stdout: 'inherit',

@@ -11,7 +11,9 @@ export const init = () => {
     .description('单独清理某个文件的所有历史记录。')
     .action(file => {
       try {
-        fs.copyFileSync(file, `${file}.backup`);
+        if (fs.existsSync(file)) {
+          fs.copyFileSync(file, `${file}.backup`);
+        }
         execa.commandSync(
           `FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch ${file}' --prune-empty --tag-name-filter cat -- --all`,
           {

@@ -1,6 +1,7 @@
 import { program } from 'commander';
 import execa from 'execa';
 import fs from 'fs-extra';
+import chalk from 'chalk';
 
 export const init = () => {
   const pkgJson = require('../package.json');
@@ -25,12 +26,12 @@ export const init = () => {
         console.log(`
 清理完后需要将本地记录覆盖到 Github（所有 branch 以及所有 tags）：
 
-  $ git push origin --force --all
-  $ git push origin --force --tags
+  ${chalk.greenBright('git push origin --force --all')}
+  ${chalk.greenBright('git push origin --force --tags')}
 
 确保没有什么问题之后，强制解除对本地存储库中的所有对象的引用和垃圾收集：
 
-  $ geita clear
+  ${chalk.greenBright('geita clear')}
 
 参考：https://help.github.com/articles/remove-sensitive-data/
         `);
@@ -81,8 +82,8 @@ export const init = () => {
         console.log(`
 清理完后需要将本地记录覆盖到 Github（所有 branch 以及所有 tags）：
 
-  $ git push origin --force --all
-  $ git push origin --force --tags
+  ${chalk.greenBright('git push origin --force --all')}
+  ${chalk.greenBright('git push origin --force --tags')}
         `);
       } catch (error: any) {
         console.log(error.message);

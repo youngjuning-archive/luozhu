@@ -41,6 +41,9 @@ export const getUmiHTMLContent = (
         <link rel="stylesheet" href="${getDiskPath('umi.css')}" />
         <style>
           // 给 webview 内容加上主题
+          #root {
+            background-color: var(--vscode-editor-background);
+          }
           body {
             padding: 0 var(--container-paddding);
             color: var(--vscode-foreground);

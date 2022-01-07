@@ -1,11 +1,11 @@
-# @luozhu/geita
+# @luozhu2021/geita
 
 > 复杂 git 命令简单化
 
 ## Install
 
 ```sh
-$ npm install @luozhu/geita -g
+$ npm install @luozhu2021/geita -g
 ```
 
 ## Commands

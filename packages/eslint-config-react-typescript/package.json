@@ -33,9 +33,9 @@
   },
   "dependencies": {
     "@luozhu/eslint-config-react": "^1.8.4",
-    "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0",
-    "eslint-import-resolver-typescript": "^2.4.0"
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint-import-resolver-typescript": "^2.5.0"
   },
   "peerDependencies": {
     "typescript": "^4.3.5"

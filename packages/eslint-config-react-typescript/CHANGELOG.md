@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.5](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-react-typescript@1.5.4...@luozhu/eslint-config-react-typescript@1.5.5) (2023-03-14)
+
+
+### Bug Fixes
+
+* support eslint v8 ([28ed3a2](https://github.com/youngjuning/luozhu/commit/28ed3a208bf7cdac8123dcfdee23f00baadc12ba))
+
+
+
+
+
 ## [1.5.4](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-react-typescript@1.5.3...@luozhu/eslint-config-react-typescript@1.5.4) (2021-09-26)
 
 **Note:** Version bump only for package @luozhu/eslint-config-react-typescript

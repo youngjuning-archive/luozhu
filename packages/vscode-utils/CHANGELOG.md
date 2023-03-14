@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.8](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.8.7...@luozhu/vscode-utils@0.8.8) (2023-03-14)
+
+
+### Bug Fixes
+
+* 修复页面启动白屏 ([2b00b70](https://github.com/youngjuning/luozhu/commit/2b00b7050a94ea7b7807e4f003e441e1776f759f))
+
+
+
+
+
 ## [0.8.7](https://github.com/youngjuning/luozhu/compare/@luozhu/vscode-utils@0.8.6...@luozhu/vscode-utils@0.8.7) (2021-10-15)
 
 **Note:** Version bump only for package @luozhu/vscode-utils

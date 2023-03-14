@@ -109,3 +109,4 @@ lib/
 .DS_Store
 .git-rewrite
 .history
+.npmrc

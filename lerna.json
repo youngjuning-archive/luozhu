@@ -3,6 +3,7 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/CHANGELOG.md"],
+  "noVerifyAccess": true,
   "command": {
     "publish": {
       "registry": "https://registry.npmjs.org"

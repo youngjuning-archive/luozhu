@@ -108,3 +108,4 @@ lib/
 # misc
 .DS_Store
 .git-rewrite
+.history

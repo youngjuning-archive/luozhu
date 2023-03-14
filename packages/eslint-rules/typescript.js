@@ -11,6 +11,8 @@ module.exports = {
   '@typescript-eslint/explicit-member-accessibility': [2, { accessibility: 'no-public' }],
   'no-unused-vars': 0,
   '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }],
+  'no-shadow': 0,
+  '@typescript-eslint/no-shadow': 1,
   '@typescript-eslint/camelcase': 0,
   '@typescript-eslint/no-non-null-assertion': 0,
   '@typescript-eslint/ban-ts-ignore': 0,

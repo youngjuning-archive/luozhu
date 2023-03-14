@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-$ yarn add -D @luozhu/eslint-config-react-typescript eslint prettier typescript @luozhu/prettier-config lint-staged yorkie
+yarn add -D @luozhu/eslint-config-react-typescript eslint prettier typescript @luozhu/prettier-config lint-staged yorkie
 ```
 
 ## 自动配置

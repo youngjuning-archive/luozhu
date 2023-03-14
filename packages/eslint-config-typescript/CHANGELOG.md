@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-03-14)
+
+
+### Features
+
+* add @luozhu/eslint-config-base &  @luozhu/eslint-config-typescript ([490d8a9](https://github.com/youngjuning/luozhu/commit/490d8a9365ae1b88798c5fb5b0a9db910b9ea69b))
+* add @luozhu/eslint-config-react ([9690d06](https://github.com/youngjuning/luozhu/commit/9690d0673764deeb6cee807dba5b5c78c005b154))
+* add @luozhu/eslint-config-react-native ([80dfbfe](https://github.com/youngjuning/luozhu/commit/80dfbfe1f85158266c4792a006b16cd2287608a4))
+* add @luozhu/eslint-config-react-typescript ([fabaccd](https://github.com/youngjuning/luozhu/commit/fabaccdac58b998d00b6bbbe44799f98804bbb57))
+* add @luozhu/eslint-rules ([cbedf6d](https://github.com/youngjuning/luozhu/commit/cbedf6d60ac0b8e0e2c72a82384868b58075a697))
+* add @luozhu/template-generator ([24cd42c](https://github.com/youngjuning/luozhu/commit/24cd42cb1ecbd70342d81713c3b3007708325c13))
+* add eslint-import-resolver-typescript ([5e1931c](https://github.com/youngjuning/luozhu/commit/5e1931c35ad3b69fab127f9b8ab48682892ddf1c))
+* add parserOptions ([e3c26ed](https://github.com/youngjuning/luozhu/commit/e3c26ed6260f6135c17eaf74c6586e63f079fc2e))
+* support eslint v8 ([dc11cf4](https://github.com/youngjuning/luozhu/commit/dc11cf4ceea7334a9f8fcedf06f33befba770863))
+
+
+
+
+
 # [1.9.0](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-typescript@1.8.5...@luozhu/eslint-config-typescript@1.9.0) (2021-10-14)
 
 

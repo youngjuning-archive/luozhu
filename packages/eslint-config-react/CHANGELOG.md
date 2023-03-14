@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-03-14)
+
+
+### Bug Fixes
+
+* add miss dependencies ([99bc63c](https://github.com/youngjuning/luozhu/commit/99bc63c56c42c94dca3cd85e1fc16bbfd95d45ae))
+
+
+### Features
+
+* add @luozhu/eslint-config-react ([9690d06](https://github.com/youngjuning/luozhu/commit/9690d0673764deeb6cee807dba5b5c78c005b154))
+* add @luozhu/eslint-config-react-native ([80dfbfe](https://github.com/youngjuning/luozhu/commit/80dfbfe1f85158266c4792a006b16cd2287608a4))
+* add @luozhu/eslint-config-react-typescript ([fabaccd](https://github.com/youngjuning/luozhu/commit/fabaccdac58b998d00b6bbbe44799f98804bbb57))
+* add @luozhu/eslint-rules ([cbedf6d](https://github.com/youngjuning/luozhu/commit/cbedf6d60ac0b8e0e2c72a82384868b58075a697))
+* add @luozhu/template-generator ([24cd42c](https://github.com/youngjuning/luozhu/commit/24cd42cb1ecbd70342d81713c3b3007708325c13))
+* remove @babel/eslint-parser ([40922be](https://github.com/youngjuning/luozhu/commit/40922be991c8a68609ac701602a8ed00578f7dea))
+* use @babel/eslint-parser ([e2b4ca7](https://github.com/youngjuning/luozhu/commit/e2b4ca7c594700823a41bfa7225e8ecdeee1e64e))
+
+
+
+
+
 ## [1.8.4](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-react@1.8.3...@luozhu/eslint-config-react@1.8.4) (2021-09-26)
 
 **Note:** Version bump only for package @luozhu/eslint-config-react

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-03-14)
+
+
+### Features
+
+* add @luozhu/eslint-config-react-typescript ([fabaccd](https://github.com/youngjuning/luozhu/commit/fabaccdac58b998d00b6bbbe44799f98804bbb57))
+* add @luozhu/eslint-rules ([cbedf6d](https://github.com/youngjuning/luozhu/commit/cbedf6d60ac0b8e0e2c72a82384868b58075a697))
+* add @luozhu/template-generator ([24cd42c](https://github.com/youngjuning/luozhu/commit/24cd42cb1ecbd70342d81713c3b3007708325c13))
+
+
+
+
+
 ## [1.4.3](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-rules@1.4.2...@luozhu/eslint-rules@1.4.3) (2021-09-26)
 
 **Note:** Version bump only for package @luozhu/eslint-rules

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-03-14)
+
+
+### Features
+
+* add @luozhu/eslint-config-react-native ([80dfbfe](https://github.com/youngjuning/luozhu/commit/80dfbfe1f85158266c4792a006b16cd2287608a4))
+* add @luozhu/template-generator ([24cd42c](https://github.com/youngjuning/luozhu/commit/24cd42cb1ecbd70342d81713c3b3007708325c13))
+* use @babel/eslint-parser ([e2b4ca7](https://github.com/youngjuning/luozhu/commit/e2b4ca7c594700823a41bfa7225e8ecdeee1e64e))
+
+
+
+
+
 ## [1.4.5](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-react-native@1.4.4...@luozhu/eslint-config-react-native@1.4.5) (2023-03-14)
 
 **Note:** Version bump only for package @luozhu/eslint-config-react-native

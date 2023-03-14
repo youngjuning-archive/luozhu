@@ -1,6 +1,6 @@
 {
   "name": "@luozhu/eslint-config-react-typescript",
-  "version": "1.5.5",
+  "version": "2.1.0",
   "description": "Luozhu's react typescript eslint config",
   "keywords": [
     "luozhu",
@@ -32,7 +32,7 @@
     "url": "https://github.com/youngjuning/luozhu/issues"
   },
   "dependencies": {
-    "@luozhu/eslint-config-react": "^1.8.4",
+    "@luozhu/eslint-config-react": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint-import-resolver-typescript": "^2.5.0"

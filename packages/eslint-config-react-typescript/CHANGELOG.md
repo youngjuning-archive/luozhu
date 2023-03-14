@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-03-14)
+
+
+### Bug Fixes
+
+* add @babel/preset-react & @babel/core ([868ebd4](https://github.com/youngjuning/luozhu/commit/868ebd4556cf0f27063b01bfb42d8ffd10919f29))
+* support eslint v8 ([28ed3a2](https://github.com/youngjuning/luozhu/commit/28ed3a208bf7cdac8123dcfdee23f00baadc12ba))
+
+
+### Features
+
+* add @luozhu/eslint-config-react-native ([80dfbfe](https://github.com/youngjuning/luozhu/commit/80dfbfe1f85158266c4792a006b16cd2287608a4))
+* add @luozhu/eslint-config-react-typescript ([fabaccd](https://github.com/youngjuning/luozhu/commit/fabaccdac58b998d00b6bbbe44799f98804bbb57))
+* add @luozhu/template-generator ([24cd42c](https://github.com/youngjuning/luozhu/commit/24cd42cb1ecbd70342d81713c3b3007708325c13))
+* remove @babel/eslint-parser ([40922be](https://github.com/youngjuning/luozhu/commit/40922be991c8a68609ac701602a8ed00578f7dea))
+
+
+
+
+
 ## [1.5.5](https://github.com/youngjuning/luozhu/compare/@luozhu/eslint-config-react-typescript@1.5.4...@luozhu/eslint-config-react-typescript@1.5.5) (2023-03-14)
 
 
